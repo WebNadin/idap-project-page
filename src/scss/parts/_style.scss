@@ -1,0 +1,70 @@
+#root{
+  height:100%;
+}
+
+.b_services{
+  padding-left:10px;
+  padding-right:10px;
+}
+.icon{
+  fill:$text-color-second;
+  &-decos{
+    width:149px;
+    height:22px;
+  }
+  &-flitsmeister{
+    width:177px;
+    height:39px;
+  }
+  &-hotelchamp{
+    width:174px;
+    height:32px;
+  }
+  &-lightspeed{
+    width:170px;
+    height:39px;
+  }
+  &-nos{
+    opacity:1;
+    width:93px;
+    height:52px;
+  }
+  &-redkix{
+    width:145px;
+    height:40px;
+  }
+  &-sap{
+    width:85px;
+    height:43px;
+  }
+  &-spider-strategies{
+    width:154px;
+    height:48px;
+  }
+  &-shutterfly{
+    width:139px;
+    height:35px;
+  }
+  &-tiqets{
+    width:102px;
+    height:39px;
+  }
+  &-trvl{
+    width:62px;
+    height:54px;
+    fill:#838997;
+  }
+  &-tripadvisor{
+    width:182px;
+    height:29px;
+  }
+}
+.service-page{
+  text-align:center;
+  margin-bottom:100px;
+}
+.wr_page{
+  display:flex;
+  flex-direction:column;
+  height:100%;
+}

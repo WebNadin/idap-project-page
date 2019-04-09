@@ -1,8 +1,7 @@
-@import "partials/const.scss"; /*Переменные*/
-@import "partials/global.scss"; /*Глобальные стили*/
-@import "partials/header.scss"; //Шапка
-@import "partials/style.scss"; //Шапка
-@import "partials/footer.scss"; /*Подвал*/
-@import "partials/media.scss"; /*Медиа-запросы*/
-
-
+@import 'parts/variables';
+@import 'parts/global';
+@import 'parts/nn-templates';
+@import 'parts/nn-templates_media';
+@import 'parts/atomic';
+@import 'parts/style';
+@import 'parts/media';

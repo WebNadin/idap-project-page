@@ -1,0 +1,16 @@
+@media screen and (min-width:993px) {
+  [type=submit]:not(:disabled), button:not(:disabled){
+    &:hover{
+      cursor:pointer
+    }
+  }
+}
+
+@media screen and (max-width:992px) {
+  [type=submit]:not(:disabled), button:not(:disabled){
+    &:hover{
+      cursor:inherit;
+    }
+  }
+}
+
