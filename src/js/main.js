@@ -1,6 +1,5 @@
 $(document).ready(function () {
-    $(".slogan").css("color", "red");
-    console.log('main.js works = ');
+    /*$(".slogan").css("color", "red");*/
     /*var $width = $(document).width();
     if ($width < 767) {
     }
