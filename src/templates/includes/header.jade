@@ -1,0 +1,70 @@
+header
+    div.pos-f-t.wr_nav.d-block.d-md-none
+        nav.navbar.navbar-light.navbar_mob
+            a.navbar-brand(href='/')
+                img(src="/dist/img/logo-mob.PNG").d-block.d-md-none
+            button.navbar-toggler.bg-light(type="button", data-toggle="collapse",data-target="#navbarToggleExternalContent",
+            aria-controls="navbarToggleExternalContent", aria-expanded="false", aria-label="Toggle navigation")
+                span.navbar-toggler-icon
+        div.collapse#navbarToggleExternalContent
+            div.p-4.text-center
+                a.nav-link.text-white(href='/')
+                    span Главная
+                a.nav-link.text-white(href='/pages/components.html', data-hover="Комплектующие")
+                    span Комплектующие
+                a.nav-link.text-white(href='/pages/passenger.html', data-hover="Легковые")
+                    span Легковые
+                a.nav-link.text-white(href='/pages/answers.html')
+                    span ЧаВо
+                a.nav-link.text-white(href='/pages/contacts.html')
+                    span Контакты
+    div.header__content.text-white.border-0.header.pr-3.pl-3.pb-4.p-md-3
+        div.nn-container
+            div.row
+                div.col-12.col-sm-6.col-md-4.d-flex.flex-column.align-items-center.align-items-sm-start.justify-content-between.order-3.order-sm-0.mb-3.mb-sm-0
+                    div.schedule.mb-3.d-none.d-sm-block
+                        div.row
+                            div.col-auto
+                                div.schedule__item.schedule__item_day
+                                    | пн-пт
+                                    br
+                                    | сб
+                                    br
+                                    | вс
+                            div.col-auto
+                                div.schedule__item
+                                    | 9 - 18
+                                    br
+                                    | 10 - 16
+                                    br
+                                    | выходной
+                    div.social-icons
+                        a.social-icons__item.pr-2(href="https://www.instagram.com/pnevmo__garage/",target="_blank", rel="noreferrer noopener")
+                            img(src="/dist/img/instagram.png")
+                        a.social-icons__item.pr-2(href="https://vk.com/pnevmo_garage",target="_blank", rel="noreferrer noopener")
+                            img(src="/dist/img/vk.png")
+                        a.social-icons__item.flicker-3.d-inline-block(href="https://www.youtube" +
+                        ".com/channel/UCwBzK2RKXVOnmRWi3YFqX0A",target="_blank", rel="noreferrer noopener")
+                            img(src="/dist/img/youtube.png")
+                div.col-12.col-sm-6.col-md-4.d-none.d-md-block
+                    div.logo.p-1.text-center
+                        a(href='/')
+                            img(src="/dist/img/logo.png")
+                div.col-12.col-sm-6.col-md-4.col-6.d-flex.justify-content-center.justify-content-sm-end.wr_contacts
+                    div.contacts.text-center.text-sm-right.d-flex.flex-column.justify-content-between.mt-4.mt-sm-0.mb-5.mb-sm-0
+                        div.contacts__item.mb-2.mb-sm-0
+                            div.row.justify-content-between
+                                div.col-auto.align-self-end
+                                    a.social-icons__item.bounce-in-top.d-inline-block(href="/pages/contacts.html",
+                                    target="_blank", data-toggle="tooltip", data-placement="top",
+                                    title="показать на карте")
+                                        img(src="/dist/img/map-icon.png")
+                                div.col-auto
+                                    span.heartbeat.d-inline-block
+                                        span.text-white.d-inline-block 095-166-00-59
+                                    br
+                                    span.text-white.d-inline-block 096-764-13-59
+                                    br
+                                    span.text-white.d-inline-block 073-764-13-59
+                        div.contacts__item.contacts__item_email auto.service.family@gmail.com
+

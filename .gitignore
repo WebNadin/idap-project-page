@@ -1,0 +1,8 @@
+/dev
+/dist
+/.idea
+/includes
+/index.html
+/node_modules
+/package-lock.json
+/pages

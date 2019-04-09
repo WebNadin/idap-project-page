@@ -1,0 +1,39 @@
+html{
+  display:flex;
+  flex-direction:column;
+  /*font-family:$font-stack-base;
+  font-size:$font-size-base;*/
+  min-height:100%;
+}
+body{
+  background:$gray-gradient;
+  color:$gray;
+  display:flex;
+  flex-direction:column;
+  font-weight:400;
+  margin:0 auto;
+  width:100%;
+}
+a{
+  outline: none;
+  &[href^=tel]{
+    color:white;
+  }
+}
+
+.nn-container{
+  margin:0 auto;
+  max-width:1200px;
+}
+.draw-attention{
+  color:$orange;
+}
+._pointer{
+  cursor:pointer;
+}
+.text-white a{
+  color:white;
+}
+
+
+

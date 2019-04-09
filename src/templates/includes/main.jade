@@ -1,0 +1,77 @@
+-
+    var carsList = [{title: "Fiat Doblo",price: "5500грн", name:"fiat-doblo"},
+    {title: "Fiat Ducato",price:"5500грн",name:"fiat-ducato"},
+    {title: "Ford Raptor",price:"5500грн", name:"ford-raptor"},
+    {title: "Ford Transit",price:"5500грн",name:"ford-transit"},
+    {title: "Gazel",price:"5500грн", name:"gazel"},
+    {title: "Mercedes Benz 316",price:"5500грн",name:"mercedes-benz-316"},
+    {title: "Mercedes Benz Vito",price:"5500грн", name:"mercedes-benz-vito"},
+    {title: "Mercedes Vario",price:"5500грн", name:"mercedes-vario"},
+    {title: "Opel Movano",price:"5500грн", name:"opel-movano"},
+    {title: "Opel Vivaro",price:"5500грн", name:"opel-vivaro"},
+    {title: "Peugeot Boxer",price:"5500грн", name:"peugeot-boxer"},
+    {title: "Renault Master",price:"5500грн", name:"renault-master"},
+    {title: "Renault Trafic",price:"5500грн", name:"renault-trafic"},
+    {title: "Volga",price:"5500грн", name:"volga"},
+    {title: "Volkswagen Crafter",price:"5500грн",name:"volkswagen-crafter"},
+    {title: "Volkswagen transporter",price:"5500грн", name:"volkswagen-transporter"}]
+
+
+mixin auto-card(model)
+    div.card-group.col-12.col-sm-6.col-lg-3.mb-1.mb-sm-4.text-center
+        div.card.auto._pointer.shadow-drop-2-center
+            div.card-header
+                span.card-title.auto__title= model.title
+            div.card-body
+                a(href="pages/brand.html")
+                    img.card-img.auto__img(src="/dist/img/cars/" + model.name + ".jpg")
+            div.card-footer
+                p.card-text.auto__price= model.price
+
+-
+    var worksList = ["works-1","works-2","works-3","works-4",
+    "works-5","works-6","works-7","works-8","works-9","works-10","works-11",
+    "works-12","works-13","works-14","works-15"]
+
+mixin gallery-works(name)
+    div.my-slider__item
+        img(src="/dist/img/works/" + name + ".jpg").img-fluid.p-2
+
+section.slogan.d-flex.flex-column.justify-content-center.align-items-center.p-4
+    div.slogan__nav.d-none.d-md-flex.justify-content-end.w-100.swing-in-top-fwd
+        nav.nav.cl-effect-17
+            a.nav-link.active(href='/', data-hover="Главная")
+                span Главная
+            a.nav-link(href='/pages/components.html', data-hover="Комплектующие")
+                span Комплектующие
+            a.nav-link(href='/pages/passenger.html', data-hover="Легковые")
+                span Легковые
+            a.nav-link(href='pages/answers.html', data-hover="ЧаВо")
+                span ЧаВо
+            a.nav-link(href='pages/contacts.html', data-hover="Контакты")
+                span Контакты
+    div.wr_text.text-center
+        h1.slogan__item.text-center.text-white.mb-4.mb-md-5.mr-auto.ml-auto Cовременные технологии
+            br
+            | по доступной цене
+        p.slogan__item.text-center.text-white.mb-4.mb-md-5.mr-auto.ml-auto.
+            Пневмоподвеска продлит жизнь вашего автомобиля, добавит комфорта в управление новым авто и обеспечит
+            стабильность в работе.
+        a.btn.btn-warn.text-uppercase.slogan__button.mt-3.mb-3(data-toggle="modal", data-target="#advantages") важно знать
+section.kit
+    h2.kit__title.my-5.text-center Комплекты
+    div.kit__gallery.d-flex.flex-wrap
+        for model in carsList
+            +auto-card(model)
+section.recommendations.mt-5
+    div.recommendations__video.video
+        div.video__title Блогеры рекомендуют
+        div.video__frame
+            iframe(width="560",height="315", src="https://www.youtube.com/embed/j7yBy0pjkyw?rel=0&amp;controls=0&amp;showinfo=0&amp;start=1155", frameborder="0", allow="autoplay; encrypted-media", allowfullscreen="allowfullscreen")
+section.gallery.mb-5
+    h2.gallery__title.my-5.text-center Наши работы
+    div.gallery__works
+        div.slider.autoplay.slick-slider.slick-dotted(role="toolbar")
+            for name in worksList
+                +gallery-works(name)
+

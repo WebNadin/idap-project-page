@@ -1,0 +1,65 @@
+$gray:#313335;
+$gray-light: #d3d3d3;
+$orange:#e58b0e;
+$blue:#012d5a;
+$white:#fff;
+$gray-gradient: linear-gradient(to right, #d3d3d3 0%, #ffffff 50%, #d3d3d3 100%);
+
+
+
+
+
+/*
+!*--------ФОН---------*!
+$background-base:#fff;
+$background-base-gray:#f7f7f7;
+$background-base-hover:rgba(255, 255, 255, .3);
+$background-second:rgba(255, 102, 51, .9);
+$background-second-hover:rgba(255, 102, 51, 1);
+$background-third:rgba(33, 7, 7, .7);
+$background-third-hover:rgba(33, 7, 7, 1);
+!*-------------------*!
+
+!*------------ТЕКСТ-----------*!
+$color-first:#3b3b3b;
+$color-second:#fff;
+$color-third:#f63;
+!*-----------------------------------*!
+
+$min-width:430px;
+
+!*----------ШРИФТ----------*!
+$font-stack-base:'PT Sans', sans-serif;
+$font-stack-second:'PT Serif', serif;
+$font-size-base:16px;
+$font-size-small:14px;
+$font-size-smallest:13px;
+$font-size-large:36px;
+$font-size-h1:52px;
+$font-size-h1-small:42px;
+$font-size-h3:26px;
+$font-size-h4:22px;
+$font-size-h5:16px;
+
+!*-------МЕДИА--------*!
+$screen-sm-min:768px; !* планшети, 768px и шире *!
+$screen-md-min:992px; !*  настольные мониторы, 992px и шире *!
+$screen-lg-min:1200px; !* большие настольные мониторы, 1200px и шире *!
+!*--------------------*!
+
+!*---------ЗАПОЛНИТЕЛИ--------- *!
+%background-img-properties{
+  background-position:top left;
+  background-size:cover;
+}
+
+%before-icon{
+  content:'';
+  display:inline-flex;
+  height:13px;
+  padding-left:18px;
+  position:relative;
+  top:3px;
+  width:13px;
+}
+!*---------------------------*!*/
