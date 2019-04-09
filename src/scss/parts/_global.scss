@@ -17,8 +17,8 @@ html{
   height:100%;
 }
 body{
-  background-color:$bg-first;
-  color:$text-color-first;
+  background-color:$bg-second;
+  /*color:$text-color-first;*/
   display:flex;
   font-family:$font-family-first;
   font-size:$font-size-base;
@@ -51,15 +51,15 @@ h2{
 }
 h1{
   font-size:$font-size-huge;
-  color:$title-color-first;
+  /*color:$title-color-first;*/
 }
 h2{
-  color:$title-color-second;
+  /*color:$title-color-second;*/
   font-size:$font-size-larger;
   margin:0;
 }
 h3{
-  color:$title-color-third;
+  /*color:$title-color-third;*/
   font-size:$font-size-large;
 }
 p{
