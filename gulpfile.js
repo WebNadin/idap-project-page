@@ -13,29 +13,25 @@ var gulp = require('gulp'),
     runSequence = require('gulp-sequence'),
     clean = require('gulp-clean'),
     minIMG = require('gulp-imagemin'),
-    jade = require('gulp-jade'),
-//runSequence = require('run-sequence'),
-//hash = require('gulp-hash-filename'),
+    jade = require('gulp-jade');
 
-    reload = browserSync.reload;
+reload = browserSync.reload;
 
-    src = {
-        js: [
-            'src/js/lib/*.js',
-            /*'src/js/lib/bootstrap.min.js',
-            'src/js/lib/jquery-3.3.1.min.js',*/
-            'src/js/main.js'
-        ],
-        /*css: [
-            '/src/css/lib/bootstrap.css',
-            '/src/css/lib/normalize.css',
-            '/src/css/main.css'
-        ],*/
-        sass: 'src/scss/**/*.scss',
-        jade: 'src/templates/**/*.jade',
-        /*fonts: 'src/fonts/!**!/!*',*/
-        img: 'src/img/**/*'
-    };
+src = {
+    js: [
+        'src/js/lib/*.js',
+        'src/js/lib/jquery.min.js',
+        'src/js/main.js'
+    ],
+    css: [
+        '/src/css/lib/normalize.css',
+        '/src/css/main.css'
+    ],
+    sass: 'src/scss/**/*.scss',
+    jade: 'src/templates/**/*.jade',
+    /*fonts: 'src/fonts/!**!/!*',*/
+    img: 'src/img/**/*'
+};
 
 gulp.task('server', function (callback) {
     runSequence('jade', 'sass-reload', 'js-dev', 'move', callback);
@@ -91,10 +87,10 @@ gulp.task('reload', function () {
 
 gulp.task('styles', function () {
     return gulp.src('dev/css/*.css')
-        .pipe(concatCSS('common.css'));
-        /*.pipe(minCSS())
-        .pipe(rename('common.min.css'));*/
-        /*.pipe(gulp.dest('dist'));*/
+        .pipe(concatCSS('common.css'))
+        .pipe(minCSS())
+        .pipe(rename('common.min.css'))
+        .pipe(gulp.dest('dist'))
 });
 
 gulp.task('js-dev', function () {
@@ -123,7 +119,7 @@ gulp.task('min-img', function () {
         }));
 });
 
-gulp.task('jade', function() {
+gulp.task('jade', function () {
     return gulp.src(src.jade)
         .pipe(plumber())
         .pipe(jade())
@@ -133,7 +129,7 @@ gulp.task('jade', function() {
 /// MAIN TASKS ----> ///
 
 gulp.task('dist', function (callback) {
-    runSequence('clean-dist','jade', 'sass-reload', 'styles', 'js-dist','min-img', callback);
+    runSequence('clean-dist', 'jade', 'sass-reload', 'styles', 'js-dist', 'min-img', callback);
 });
 
 gulp.task('default', function (callback) {
