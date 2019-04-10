@@ -39,12 +39,12 @@ gulp.task('server', function (callback) {
         /*proxy: "rplus.zeema.org.ua/"*/
 
         server: {
-            baseDir: "./"
+            baseDir: "dev"
         }
     });
     gulp.watch(src.sass, ['sass-reload']);
     gulp.watch(src.js, ['js-dev']).on('change', reload);
-    gulp.watch(src.jade, ['jade']).on('change', reload);
+    gulp.watch(src.jade, ['jade']).on('change', 'move', reload);
 });
 
 gulp.task('move', function () {
@@ -52,6 +52,10 @@ gulp.task('move', function () {
         .pipe(gulp.dest('dev/css/'));
     gulp.src('src/js/lib/**/*.js')
         .pipe(gulp.dest('dev/js/'));
+    gulp.src('dev/img/**/*')
+        .pipe(gulp.dest('dist/img'));
+    gulp.src('dev/*.html')
+        .pipe(gulp.dest('dist/'));
 });
 
 gulp.task('sass-reload', function (callback) {
@@ -65,6 +69,10 @@ gulp.task('clean-dist', function () {
 
 gulp.task('clean-css', function () {
     return gulp.src('dev/css/common.css', {read: false})
+        .pipe(clean());
+});
+gulp.task('clean-img', function () {
+    return gulp.src('dev/img/**.*', {read: false})
         .pipe(clean());
 });
 
@@ -111,7 +119,7 @@ gulp.task('js-dist', function () {
 gulp.task('min-img', function () {
     return gulp.src(src.img)
         .pipe(minIMG())
-        .pipe(gulp.dest('dist/img'))
+        .pipe(gulp.dest('dev/img'))
         .pipe(notify({
             message: ' ',
             title: 'IMG done!',
@@ -123,13 +131,13 @@ gulp.task('jade', function () {
     return gulp.src(src.jade)
         .pipe(plumber())
         .pipe(jade())
-        .pipe(gulp.dest('./'));
+        .pipe(gulp.dest('dev/'));
 });
 
 /// MAIN TASKS ----> ///
 
 gulp.task('dist', function (callback) {
-    runSequence('clean-dist', 'jade', 'sass-reload', 'styles', 'js-dist', 'min-img', callback);
+    runSequence('clean-dist', 'jade', 'sass-reload', 'styles', 'js-dist', 'clean-img', 'min-img', 'move',  callback);
 });
 
 gulp.task('default', function (callback) {
