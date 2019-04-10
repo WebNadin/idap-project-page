@@ -18,53 +18,19 @@ html{
 }
 body{
   background-color:$bg-second;
-  /*color:$text-color-first;*/
+  color:$text-color-first;
   display:flex;
   font-family:$font-family-first;
   font-size:$font-size-base;
   flex-direction:column;
+  min-height:600px;
   height:100%;
 }
 main{
   flex:1 0 auto;
+  margin-left:130px;
 }
-/*header{
-  position:fixed;
-  width:100%;
-}*/
-footer{
-  background-color:#f7f7f7;
-  flex:0 0 auto;
-  padding-top:30px;
-  padding-bottom:30px;
-}
-header{
-  max-width:1200px;
-  margin:45px auto 115px;
-  min-width:320px;
-  position:sticky;
-  top:0;
-  z-index:10000;
-}
-h2{
-  text-transform:uppercase;
-}
-h1{
-  font-size:$font-size-huge;
-  /*color:$title-color-first;*/
-}
-h2{
-  /*color:$title-color-second;*/
-  font-size:$font-size-larger;
-  margin:0;
-}
-h3{
-  /*color:$title-color-third;*/
-  font-size:$font-size-large;
-}
-p{
-  margin:0;
-}
+
 
 
 
