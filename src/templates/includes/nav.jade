@@ -1,25 +1,46 @@
-mixin nav-card(icon,title,mod)
-    - mod = mod || ''
+mixin nav-card(icon,title)
     div.nn-card.nn-card_nav
         div.nn-card__item
-            svg(class="icon icon-" + icon + ' ' + "icon_" + mod)
+            svg(class="icon icon-" + icon)
                 use(xlink:href="img/symbol-defs.svg#icon-" + icon)
-        div.nn-card__item= title
+        div.nn-card__item
+            div.title.title_nav= title
 
-section.instruments._abs-left
-    div.nn-b-img
-        img.card-img(src="img/avatar-current.jpg")
+mixin points
+    div.nn-b-points
+        div.nn-b-points__item
+        div.nn-b-points__item
+        div.nn-b-points__item
+
+mixin txt(number, mod)
+    - mod = mod || ''
+    div(class="nn-txt " + mod)=number
+
+section.tools._abs-left
+    div.wr_avatar._relative._attention
+        +txt('2')
+        div.nn-b-img
+            img.card-img(src="img/avatar-current.jpg")
     nav
         div.nn-nav
             div.nn-nav__item
+                +points
                 div.wr_card.active
                     +nav-card('meter','Board')
-                +nav-card('menu','Projects')
-                +nav-card('cog','Settings')
+                +points
+                div.wr_card._relative
+                    +txt('9', '_menu')
+                    +nav-card('menu','Projects')
+                +points
+                div.wr_card
+                    +nav-card('cog','Settings')
 
             div.nn-nav__item
-                +nav-card('command','Upgrade')
-                +nav-card('switch','Logout')
+                div.wr_card
+                    +nav-card('command','Upgrade')
+                +points
+                div.wr_card._attention
+                    +nav-card('switch','Logout')
 
 
 
