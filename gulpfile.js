@@ -43,7 +43,7 @@ gulp.task('server', function (callback) {
     });
     gulp.watch(src.sass, ['sass-reload']);
     gulp.watch(src.js, ['js-dev']).on('change', reload);
-    gulp.watch(src.jade, ['jade']).on('change', 'move', reload);
+    gulp.watch(src.jade, ['jade']).on('change', reload);
 });
 
 gulp.task('move', function () {
