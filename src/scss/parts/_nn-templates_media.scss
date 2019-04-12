@@ -1,6 +1,9 @@
 @media screen and (max-width:1200px) {
 }
 @media screen and (max-width:992px) {
+  .active .nn-card:before{
+    height:70px !important;
+  }
   .nn-card{
     padding:10px 15px;
   }
