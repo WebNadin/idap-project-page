@@ -1,16 +1,30 @@
-//mixin icon(name,mod)
+mixin nav-card(icon,title,mod)
     - mod = mod || ''
-    svg(class="icon " + name + ' ' + mod)
-        use(xlink:href="img/symbol-defs.svg#" + name)
-
-mixin icon(name,mod)
-    - mod = mod || ''
-    svg(class="icon icon-" + name + ' ' + "icon_" + mod)
-        use(xlink:href="img/symbol-defs.svg#icon-" + name)
+    div.nn-card.nn-card_nav
+        div.nn-card__item
+            svg(class="icon icon-" + icon + ' ' + "icon_" + mod)
+                use(xlink:href="img/symbol-defs.svg#icon-" + icon)
+        div.nn-card__item= title
 
 nav
-    div.nn-nav.nn-nav_abs-left nav21
-        +icon('clock','red')
+    div.nn-nav._abs-left
+        div.nn-nav__item.nn-nav__item_top
+            div.nn-card
+                div.nn-b-img
+                    img.card-img(src="img/avatar-current.jpg")
+            +nav-card('meter','Board','red')
+            +nav-card('menu','Projects')
+            +nav-card('cog','Settings')
+
+        div.nn-nav__item.nn-nav__item_bottom
+            +nav-card('command','Upgrade')
+            +nav-card('switch','Logout')
+
+
+
+
+
+
 
 
 

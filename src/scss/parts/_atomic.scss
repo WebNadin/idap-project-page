@@ -7,6 +7,25 @@
 .relative{
   position:relative;
 }
+._abs-left{
+  background-color:black;
+  height:100%;
+  left:0;
+  position:absolute;
+  top:0;
+  z-index:100;
+}
+/*._points{
+  position:relative;
+  &:after{
+    content:"\2022 \2022 \2022";
+    font-size:16px;
+    position:absolute;
+    bottom:0;
+    left:45%;
+    color:red;
+  }
+}*/
 
 
 
