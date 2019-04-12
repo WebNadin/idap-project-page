@@ -15,7 +15,7 @@
     "ruby": "^0.6.1"
   },
   "devDependencies": {
-    "browser-sync": "^2.23.7",
+    "browser-sync": "^2.26.3",
     "css-mqpacker": "^7.0.0",
     "cssnano": "^4.1.10",
     "gulp": "^3.9.1",

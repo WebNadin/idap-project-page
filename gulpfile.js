@@ -13,9 +13,8 @@ var gulp = require('gulp'),
     runSequence = require('gulp-sequence'),
     clean = require('gulp-clean'),
     minIMG = require('gulp-imagemin'),
-    jade = require('gulp-jade');
-
-reload = browserSync.reload;
+    jade = require('gulp-jade'),
+    reload = browserSync.reload;
 
 src = {
     js: [
@@ -39,7 +38,7 @@ gulp.task('server', function (callback) {
         /*proxy: "rplus.zeema.org.ua/"*/
 
         server: {
-            baseDir: "dev"
+            baseDir: "dev/"
         }
     });
     gulp.watch(src.sass, ['sass-reload']);
