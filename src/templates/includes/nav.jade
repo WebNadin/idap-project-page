@@ -1,8 +1,16 @@
+//mixin icon(name,mod)
+    - mod = mod || ''
+    svg(class="icon " + name + ' ' + mod)
+        use(xlink:href="img/symbol-defs.svg#" + name)
+
+mixin icon(name,mod)
+    - mod = mod || ''
+    svg(class="icon icon-" + name + ' ' + "icon_" + mod)
+        use(xlink:href="img/symbol-defs.svg#icon-" + name)
 
 nav
-    div.nav.nav_abs-left nav20
-        svg(class="icon icon-clock")
-            use(xlink:href="img/symbol-defs.svg#icon-clock")
+    div.nn-nav.nn-nav_abs-left nav21
+        +icon('clock','red')
 
 
 
