@@ -1,9 +1,31 @@
 #root{
   height:100%;
 }
-.active{
+.active, ._attention{
   .icon{
     fill:$icon-color-active;
+  }
+  .title_nav{
+    color:$text-color-second;
+  }
+  .nn-txt{
+    background-color:$icon-color-active;
+  }
+}
+.active{
+  .nn-card{
+    position:relative;
+    &:before{
+      background-color:red;
+      border-radius:0 5px 5px 0;
+      content:'';
+      display:block;
+      height:110px;
+      left:0;
+      position:absolute;
+      top:0;
+      width:5px;
+    }
   }
 }
 .icon{
@@ -11,9 +33,21 @@
   height:44px;
   width:44px;
 }
-
-.instruments{
+.tools{
+  box-sizing:border-box;
   display:flex;
   flex:1;
   flex-direction:column;
+  padding-bottom:30px;
+  padding-top:30px;
+  width:130px;
+}
+.title{
+  &_nav{
+    font-size:$font-size-smaller;
+  }
+}
+.wr_avatar{
+  margin:0 auto;
+  padding:0 30px;
 }

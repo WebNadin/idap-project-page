@@ -1,6 +1,6 @@
 .nn-b-img{
   border-radius:50%;
-  margin:0 auto;
+  box-sizing:border-box;
   overflow:hidden;
   img{
     display:block;
@@ -8,10 +8,23 @@
     height:100%;
   }
 }
+.nn-b-points{
+  display:flex;
+  justify-content:center;
+  margin:0 auto;
+  &__item{
+    background-color:#595959;
+    border-radius:50%;
+    height:5px;
+    margin:12px 3px;
+    width:5px;
+  }
+}
 .nn-card{
   display:flex;
   flex-flow:row wrap;
   justify-content:center;
+  padding:20px 30px;
   &__item{
     text-align:center;
     width:100%;
@@ -23,17 +36,27 @@
   flex-direction:column;
   justify-content:space-between;
   height:100%;
-  padding:30px 20px;
-  width:130px;
   &__item{
     width:100%;
     &_bottom{
       align-self:flex-end;
     }
   }
-
 }
-
+.nn-txt{
+  background-color:$bg-second-dark;
+  color:$text-color-second;
+  align-items:center;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  position:absolute;
+  right:20px;
+  text-align:center;
+  top:-10px;
+  width:30px;
+  height:30px;
+}
 
 
 

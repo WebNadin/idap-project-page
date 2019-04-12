@@ -1,12 +1,4 @@
-.fixed{
-  position:fixed;
-  width:100%;
-  height:100%;
-  overflow:hidden;
-}
-.relative{
-  position:relative;
-}
+
 ._abs-left{
   background-color:black;
   display:block;
@@ -15,17 +7,12 @@
   position:absolute;
   top:0;
 }
-/*._points{
+._menu{
+  top:8px;
+}
+._relative{
   position:relative;
-  &:after{
-    content:"\2022 \2022 \2022";
-    font-size:16px;
-    position:absolute;
-    bottom:0;
-    left:45%;
-    color:red;
-  }
-}*/
+}
 
 
 
