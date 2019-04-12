@@ -1,13 +1,19 @@
 #root{
   height:100%;
 }
-
+.active{
+  .icon{
+    fill:$icon-color-active;
+  }
+}
 .icon{
   fill:$icon-color-base;
   height:44px;
   width:44px;
-  &_red{
-    fill:red;
-  }
 }
 
+.instruments{
+  display:flex;
+  flex:1;
+  flex-direction:column;
+}

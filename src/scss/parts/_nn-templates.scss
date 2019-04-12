@@ -20,8 +20,9 @@
 .nn-nav{
   color:$text-color-third;
   display:flex;
-  flex-flow:row wrap;
-  justify-content:center;
+  flex-direction:column;
+  justify-content:space-between;
+  height:100%;
   padding:30px 20px;
   width:130px;
   &__item{
