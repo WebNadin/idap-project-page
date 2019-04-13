@@ -9,6 +9,21 @@
   }
 }
 @media screen and (max-width:768px) {
+  .nice-select{
+    height:38px;
+    line-height:35px;
+    padding-left: 40px;
+    padding-right: 30px;
+    .current{
+      font-size:12px;
+    }
+    &:before{
+      left:15px;
+    }
+    &:after{
+      right:15px;
+    }
+  }
 }
 @media screen and (max-width:540px) {
 }

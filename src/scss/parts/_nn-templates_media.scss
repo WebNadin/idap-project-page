@@ -12,6 +12,32 @@
   }
 }
 @media screen and (max-width:768px) {
+  .nn-button_header{
+    font-size:14px;
+    padding:10px 15px;
+  }
 }
 @media screen and (max-width:540px) {
+  .nn-b-icon_header{
+    display:none;
+  }
+}
+@media screen and (max-width:450px) {
+  .nn-card{
+    &_header{
+      justify-content:center;
+      &:first-child{
+        margin-bottom:20px;
+      }
+    }
+
+  }
+
+  .nn-header{
+    display:flex;
+    flex-direction:column;
+    &__item{
+      width:100%;
+    }
+  }
 }
