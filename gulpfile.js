@@ -19,11 +19,11 @@ var gulp = require('gulp'),
 src = {
     js: [
         'src/js/lib/*.js',
-        'src/js/lib/jquery.min.js',
+        //'src/js/lib/jquery.min.js',
         'src/js/main.js'
     ],
     css: [
-        '/src/css/lib/normalize.css',
+        '/src/css/lib/*.css',
         '/src/css/main.css'
     ],
     sass: 'src/scss/**/*.scss',

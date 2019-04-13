@@ -33,6 +33,39 @@
   height:44px;
   width:44px;
 }
+.nice-select{
+  background-color:transparent;
+  border:1px solid $border-color-second;
+  border-radius:20px;
+  padding-left:50px;
+  padding-right:37px;
+  text-transform:uppercase;
+  &.open .list{
+    width:100%;
+  }
+  .current{
+    font-weight:bold;
+  }
+  .selected{
+    display:none;
+  }
+  &:after{
+    color:#a6a6a6;
+    right:20px;
+  }
+  &:before{
+    background:url('../img/icons/bubbles3.svg') no-repeat center center;
+    background-size:100% 100%;
+    content:'';
+    height:18px;
+    left:20px;
+    margin-top: -9px;
+    /*opacity:.2;*/
+    position:absolute;
+    top: 50%;
+    width:18px;
+  }
+}
 .tools{
   box-sizing:border-box;
   display:flex;
