@@ -49,6 +49,16 @@
   .selected{
     display:none;
   }
+  /*.option:before{
+    background:url("../img/avatar/mark-p.jpg") no-repeat center center;
+    background-size:cover;
+    display:block;
+    height:30px;
+    left:0;
+    position:absolute;
+    top:0;
+    width:30px;
+  }*/
   &:after{
     color:#a6a6a6;
     right:20px;
@@ -59,10 +69,10 @@
     content:'';
     height:18px;
     left:20px;
-    margin-top: -9px;
+    margin-top:-9px;
     /*opacity:.2;*/
     position:absolute;
-    top: 50%;
+    top:50%;
     width:18px;
   }
 }
