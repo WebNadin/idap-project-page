@@ -1,20 +1,14 @@
-@media screen and (max-width:1200px){
-
+@media screen and (max-width:1200px) {
 }
-
-
-@media screen and (max-width:992px){
+@media screen and (max-width:992px) {
+  header, main{
+    margin-left:100px;
+  }
   .tools{
     width:100px;
   }
 }
-
-
-@media screen and (max-width:768px){
-
+@media screen and (max-width:768px) {
 }
-
-
-@media screen and (max-width:540px){
-
+@media screen and (max-width:540px) {
 }

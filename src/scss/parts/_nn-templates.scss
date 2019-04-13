@@ -1,3 +1,22 @@
+.nn-b-icon{
+  background-color:$icon-color-active;
+  border-radius:50%;
+  box-sizing:border-box;
+  height:40px;
+  margin-right:7px;
+  transform:scale(-1, 1);
+  width:40px;
+  &_header{
+    padding:0 13px;
+  }
+  .icon{
+    &_header{
+      fill:$bg-first;
+      width:100%;
+      height:100%;
+    }
+  }
+}
 .nn-b-img{
   border-radius:50%;
   box-sizing:border-box;
@@ -20,16 +39,42 @@
     width:5px;
   }
 }
-.nn-card{
-  display:flex;
-  flex-flow:row wrap;
-  justify-content:center;
-  padding:20px 30px;
-  &__item{
-    text-align:center;
-    width:100%;
+.nn-button{
+  background-color:transparent;
+  border:1px solid $border-color;
+  border-radius:20px;
+  padding:10px 20px;
+  transition:all ease .3s;
+  &:hover{
+    background-color:$bg-second-dark;
+    color:$text-color-second;
+  }
+  &:hover, &:active, &:focus{
+    outline:none;
   }
 }
+.nn-card{
+  display:flex;
+  &_nav{
+    flex-flow:row wrap;
+    justify-content:center;
+    padding:20px 30px;
+  }
+  &__item{
+    &_nav{
+      text-align:center;
+      width:100%;
+    }
+  }
+}
+
+.nn-header{
+  border-bottom:1px solid $border-color;
+  display:flex;
+  justify-content:space-between;
+  padding:30px;
+}
+
 .nn-nav{
   color:$text-color-third;
   display:flex;

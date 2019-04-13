@@ -26,9 +26,11 @@ body{
   min-height:600px;
   height:100%;
 }
+header, main{
+  margin-left:130px;
+}
 main{
   flex:1 0 auto;
-  margin-left:130px;
 }
 
 nav{
