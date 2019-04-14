@@ -55,6 +55,11 @@
     width:5px;
   }
 }
+.nn-b-tabs{
+  align-items:center;
+  display:flex;
+  justify-content:space-between;
+}
 .nn-button{
   background-color:transparent;
   border:1px solid #c8c8c8;
@@ -102,6 +107,12 @@
     }
   }
 }
+
+.nn-tabs{
+  display:flex;
+}
+
+
 .nn-txt{
   background-color:$bg-second-dark;
   color:$text-color-second;

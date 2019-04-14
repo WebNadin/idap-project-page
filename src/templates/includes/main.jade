@@ -1,2 +1,19 @@
 main
-    p main
+    div.wr_main
+        div.nn-b-tabs
+            div.nn-b-tabs__item
+                div#tabs.nn-tabs
+                    div.nn-tabs__item
+                        a(href='#', title='projects') projects
+                    div.nn-tabs__item
+                        a(href='#', title='messenger') messenger
+            div.nn-b-tabs__item
+                div.title.title_tabs Search Project, User, Task, etc...
+        div#content.content
+            div#projects.content__item
+                include ./projects.jade
+            div#messenger.content__item
+                h1 Messenger page
+                p Pursues with enjoy those occur can physical avoids builder from truth explain, was him us pain there exercise do. Actual this annoying how anyone who know physical do mistaken give idea. Master it in master resultant that can itself fault except can explorer procure who master denouncing trivial. A has him builder produces: idea chooses human occasionally him praising right, all explain truth which. Any, pursue some man occasionally: us, from not master itself advantage account annoying explain&nbsp;&mdash; there rejects physical. Chooses, some take teachings the occasionally denouncing, produces consequences a some physical, will consequences occasionally are master from teachings any of.</p>
+    div.wr_sidebar
+        include ./sidebar.jade
