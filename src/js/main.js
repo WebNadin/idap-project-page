@@ -20,6 +20,8 @@ function switchTabs() {
         e.preventDefault();
         $("#content .b-content__item").hide(); //Скрыть все сожержание
         $("#tabs .nn-tabs__item").attr("id", ""); //Сброс ID
+        $(this).parent(".nn-tabs__item").toggleClass("active");
+        $("#tabs a").not(this).parent(".nn-tabs__item").toggleClass("active");
         $(this).parent().attr("id", "current"); // Активируем закладку
         $('#' + $(this).attr('title')).fadeIn(); // Выводим содержание текущей закладки
     });
