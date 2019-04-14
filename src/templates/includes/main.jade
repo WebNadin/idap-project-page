@@ -1,11 +1,24 @@
+mixin txt(number, mod)
+    - mod = mod || ''
+    div(class="nn-txt nn-txt" + mod)=number
+
+
 main
     section.nn-b-tabs
         div.nn-b-tabs__item
             div#tabs.nn-tabs
                 div.nn-tabs__item.active
-                    a(href='#', title='projects') projects
+                    div.nn-card
+                        div.nn-card__item
+                            div.nn-b-icon.nn-b-icon_tabs
+                                svg(class="icon icon_tabs icon-clock")
+                                    use(xlink:href="img/symbol-defs.svg#icon-clock")
+                        div.nn-card__item
+                            a(href='#', title='projects') Active Projects
+                        +txt('9', '_tabs')
+
                 div.nn-tabs__item
-                    a(href='#', title='messenger') messenger
+                    a(href='#', title='messenger') Messenger
         div.nn-b-tabs__item
             div.title.title_tabs Search Project, User, Task, etc...
     div.main

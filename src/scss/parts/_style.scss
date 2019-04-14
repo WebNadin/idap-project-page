@@ -4,16 +4,16 @@
 .active, ._attention{
   .icon{
     fill:$icon-color-active;
+    &_tabs{
+      fill:$icon-color-light;
+    }
   }
   .title{
     color:$text-color-second;
   }
-  .nn-txt{
-    background-color:$icon-color-active;
-  }
 }
 .active{
-  .nn-card{
+  .nn-card_nav{
     position:relative;
     &:before{
       background-color:red;

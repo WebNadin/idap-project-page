@@ -25,6 +25,10 @@
     transition:all 0.15s ease-in-out;
     width:5px;
   }
+  &_tabs{
+    background-color:transparent;
+    margin-right:12px;
+  }
   .icon{
     &_header{
       fill:$bg-first;
@@ -32,6 +36,7 @@
       height:100%;
     }
   }
+
 }
 .nn-b-img{
   border-radius:50%;
@@ -60,7 +65,6 @@
   display:flex;
   justify-content:space-between;
 }
-
 .nn-button{
   background-color:transparent;
   border:1px solid #c8c8c8;
@@ -76,6 +80,7 @@
   }
 }
 .nn-card{
+  align-items:center;
   display:flex;
   &_nav{
     flex-flow:row wrap;
@@ -108,7 +113,6 @@
     }
   }
 }
-
 .nn-tabs{
   display:flex;
   &__item{
@@ -116,14 +120,13 @@
     border-bottom:1px solid $border-color;
     border-right:1px solid $border-color;
     box-sizing:border-box;
+    padding:20px 30px;
     &.active{
       background-color:$bg-first;
       border-bottom:none;
     }
   }
 }
-
-
 .nn-txt{
   background-color:$bg-second-dark;
   color:$text-color-second;
@@ -137,6 +140,14 @@
   top:-10px;
   width:30px;
   height:30px;
+  &_tabs{
+    left:5px;
+    position:relative;
+    top:-13px;
+  }
+  &_attention{
+    background-color:$icon-color-active;
+  }
 }
 
 

@@ -14,11 +14,11 @@ mixin points
 
 mixin txt(number, mod)
     - mod = mod || ''
-    div(class="nn-txt " + mod)=number
+    div(class="nn-txt nn-txt" + mod)=number
 
 section.tools._abs-left
     div.wr_avatar._relative._attention
-        +txt('2')
+        +txt('2', '_attention')
         div.nn-b-img
             img.card-img(src="img/avatar-current.jpg")
     nav
