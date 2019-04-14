@@ -120,6 +120,12 @@
     }
   }
 }
+
+.nn-sidebar{
+  display:flex;
+  flex-direction:column;
+}
+
 .nn-tabs{
   display:flex;
   &__item{
