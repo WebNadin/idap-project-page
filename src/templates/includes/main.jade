@@ -1,7 +1,7 @@
 mixin txt(number, mod1, mod2)
     - mod1 = mod1 || ''
     - mod2 = mod2 || ''
-    div(class="nn-txt nn-txt" + mod1 + " nn-txt" +mod2)=number
+    div(class="nn-txt nn-txt" + mod1 + " nn-txt" + mod2)=number
 
 
 main
@@ -9,25 +9,26 @@ main
         div.nn-b-tabs__item
             div#tabs.nn-tabs
                 div.nn-tabs__item.active
-                    div.nn-card
-                        div.nn-card__item
-                            div.nn-b-icon.nn-b-icon_tabs
-                                svg(class="icon icon_tabs icon-clock")
-                                    use(xlink:href="img/symbol-defs.svg#icon-clock")
-                        div.nn-card__item
-                            a(href='#', title='projects') Active Projects
-                        +txt('9', '_tabs')
+                    a.js-link_tabs(href='#', title='projects')
+                        div.nn-card
+                            div.nn-card__item
+                                div.nn-b-icon.nn-b-icon_tabs
+                                    svg(class="icon icon_tabs icon-clock")
+                                        use(xlink:href="img/symbol-defs.svg#icon-clock")
+                            div.nn-card__item
+                                span Active Projects
+                            +txt('9', '_tabs')
 
                 div.nn-tabs__item
-                    div.nn-card
-                        div.nn-card__item
-                            div.nn-b-icon.nn-b-icon_tabs
-                                svg(class="icon icon_tabs icon-mail2")
-                                    use(xlink:href="img/symbol-defs.svg#icon-mail2")
-                        div.nn-card__item
-                            a(href='#', title='messenger') Messenger
-                        +txt('2', '_tabs', '_attention')
-
+                    a.js-link_tabs(href='#', title='messenger')
+                        div.nn-card
+                            div.nn-card__item
+                                div.nn-b-icon.nn-b-icon_tabs
+                                    svg(class="icon icon_tabs icon-mail2")
+                                        use(xlink:href="img/symbol-defs.svg#icon-mail2")
+                            div.nn-card__item
+                                span Messenger
+                            +txt('2', '_tabs', '_attention')
         div.nn-b-tabs__item
             div.title.title_light.title_tabs Search Project, User, Task, etc...
     div.main
