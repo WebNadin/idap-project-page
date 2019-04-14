@@ -1,4 +1,18 @@
 @media screen and (max-width:1200px) {
+  .nn-b-tabs{
+    font-size:$font-size-base;
+    &__item:last-child{
+      display:flex;
+      justify-content:flex-end;
+      padding-right:30px;
+      width:250px;
+    }
+  }
+}
+@media screen and (max-width:1024px) {
+  .nn-tabs__item{
+    padding:15px 20px;
+  }
 }
 @media screen and (max-width:992px) {
   .active .nn-card:before{
@@ -12,14 +26,23 @@
   }
 }
 @media screen and (max-width:768px) {
+  .nn-b-tabs{
+    font-size:$font-size-smaller;
+  }
   .nn-button_header{
     font-size:14px;
     padding:10px 15px;
   }
 }
 @media screen and (max-width:540px) {
-  .nn-b-icon_header{
-    display:none;
+  .nn-b-icon{
+    &_header, &_tabs{
+      display:none;
+    }
+  }
+  .nn-tabs__item{
+    padding-top:20px;
+    padding-bottom:10px;
   }
 }
 @media screen and (max-width:450px) {
@@ -32,7 +55,6 @@
     }
 
   }
-
   .nn-header{
     display:flex;
     flex-direction:column;

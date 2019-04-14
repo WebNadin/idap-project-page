@@ -1,8 +1,18 @@
 @media screen and (max-width:1200px) {
+  .title_light{
+    font-size:$font-size-smaller;
+  }
 }
 @media screen and (max-width:992px) {
   header, main{
     margin-left:100px;
+  }
+  .icon{
+    height:35px;
+    width:35px;
+  }
+  .title_tabs{
+    display:none;
   }
   .tools{
     width:100px;
@@ -12,8 +22,8 @@
   .nice-select{
     height:38px;
     line-height:35px;
-    padding-left: 40px;
-    padding-right: 30px;
+    padding-left:40px;
+    padding-right:30px;
     .current{
       font-size:12px;
     }

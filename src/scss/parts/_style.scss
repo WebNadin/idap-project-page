@@ -28,18 +28,19 @@
     }
   }
 }
-
 .main{
   background-color:$bg-first;
   display:flex;
   justify-content:space-between;
   height:100%;
 }
-
 .icon{
   fill:$icon-color-base;
   height:44px;
   width:44px;
+  &_tabs{
+    fill:$icon-color-light;
+  }
 }
 .nice-select{
   background-color:transparent;
@@ -84,6 +85,11 @@
   width:130px;
 }
 .title{
+  font-size:$font-size-larger;
+  &_light{
+    color:$text-color-first-light;
+    opacity:.5;
+  }
   &_nav{
     font-size:$font-size-smaller;
   }

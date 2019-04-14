@@ -1,7 +1,9 @@
 .nn-b-icon{
+  align-items:center;
   background-color:$icon-color-active;
   border-radius:50%;
   box-sizing:border-box;
+  display:flex;
   height:40px;
   margin-right:7px;
   transform:scale(-1, 1);
@@ -63,7 +65,12 @@
 .nn-b-tabs{
   align-items:center;
   display:flex;
+  font-size:$font-size-large;
   justify-content:space-between;
+  &__item:last-child{
+    padding-left:30px;
+    width:415px;
+  }
 }
 .nn-button{
   background-color:transparent;
@@ -141,6 +148,7 @@
   width:30px;
   height:30px;
   &_tabs{
+    flex-shrink:0;
     left:5px;
     position:relative;
     top:-13px;
