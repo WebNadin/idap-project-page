@@ -60,6 +60,7 @@
   display:flex;
   justify-content:space-between;
 }
+
 .nn-button{
   background-color:transparent;
   border:1px solid #c8c8c8;
@@ -110,6 +111,16 @@
 
 .nn-tabs{
   display:flex;
+  &__item{
+    background-color:$bg-second-light;
+    border-bottom:1px solid $border-color;
+    border-right:1px solid $border-color;
+    box-sizing:border-box;
+    &.active{
+      background-color:$bg-first;
+      border-bottom:none;
+    }
+  }
 }
 
 

@@ -3,9 +3,10 @@ a{
   cursor:pointer;
   text-decoration:none;
   outline:none;
-  &:hover, &:active{
+  &:hover, &:active, &:visited, &:focus{
     text-decoration:none;
     color:inherit;
+    outline:none;
   }
 }
 button{
