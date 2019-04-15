@@ -1,113 +1,196 @@
 -
-    var userList = [
+    var taskList = [
     {
-    name: "Mark P.",
-    imgName: "mark-p",
-    isOnline: true,
-    message:"add an Image into Worlda",
+    title: "Create Contact Formular",
+    project: "Worlda",
+    progress: "23%",
+    subtask: [
+    {
     date: "today",
-    time:"10:30"
+    teamImgName:[
+    "mark-p", "marvin-s", "sebastian-k"
+    ],
+    time:"13:40",
+    title: "Creating the Context",
+    progress: "66%"
     },
     {
-    name: "Marvin S.",
-    imgName: "marvin-s",
-    isOnline: true,
-    message:"add an Image into Worlda",
-    date: "today",
-    time:"10:30"
+    date: "yesterday",
+    teamImgName:[
+    "marvin-s", "sebastian-k"
+    ],
+    time:"12:40",
+    title: "Implementation in the Layout",
+    progress: "ready"
+    }
+    ]
     },
     {
-    name: "Sebastian K. ",
-    imgName: "sebastian-k",
-    message:"add an Image into Worlda",
+    title: "Create Subpage PSD",
+    project: "Panorama",
+    progress: "87%",
+    subtask: [
+    {
     date: "today",
-    time:"10:30"
+    teamImgName:[
+    "mark-p", "marvin-s", "sebastian-k"
+    ],
+    time:"13:40",
+    title: "Creating the Context",
+    progress: "66%"
     },
     {
-    name: "Mark P.",
-    imgName: "mark-p",
-    isOnline: true,
-    message:"add an Image into Worlda",
-    date: "today",
-    time:"10:30"
+    date: "yesterday",
+    teamImgName:[
+    "marvin-s", "sebastian-k"
+    ],
+    time:"12:40",
+    title: "Implementation in the Layout",
+    progress: "ready"
+    }
+    ]
     },
     {
-    name: "Philip O.",
-    imgName: "philip-o",
-    isOnline: true,
-    message:"add an Image into Worlda",
+    title: "Layout & implementation in HTML & CSS",
+    project: "Ebay Relaunch",
+    progress: "83%",
+    subtask: [
+    {
     date: "today",
-    time:"10:30"
+    teamImgName:[
+    "mark-p", "marvin-s", "sebastian-k"
+    ],
+    time:"13:40",
+    title: "Creating the Context",
+    progress: "66%"
     },
     {
-    name: "Benni I.",
-    imgName: "benni-i",
-    isOnline: true,
-    message:"add an Image into Worlda",
-    date: "today",
-    time:"10:30"
+    date: "yesterday",
+    teamImgName:[
+    "marvin-s", "sebastian-k"
+    ],
+    time:"12:40",
+    title: "Implementation in the Layout",
+    progress: "ready"
+    }
+    ]
     },
     {
-    name: "Mark P.",
-    imgName: "mark-p",
-    isOnline: true,
-    message:"add an Image into Worlda",
+    title: "Lorem ipsum dolor sit amet, elitr, sed diam  nonumy eirmod temp",
+    project: "Panorama",
+    progress: "23%",
+    subtask: [
+    {
     date: "today",
-    time:"10:30"
+    teamImgName:[
+    "mark-p", "marvin-s", "sebastian-k"
+    ],
+    time:"13:40",
+    title: "Creating the Context",
+    progress: "66%"
     },
     {
-    name: "Marvin S.",
-    imgName: "marvin-s",
-    isOnline: true,
-    message:"add an Image into Worlda",
-    date: "today",
-    time:"10:30"
+    date: "yesterday",
+    teamImgName:[
+    "marvin-s", "sebastian-k"
+    ],
+    time:"12:40",
+    title: "Implementation in the Layout",
+    progress: "ready"
+    }
+    ]
     },
     {
-    name: "Sebastian K. ",
-    imgName: "sebastian-k",
-    isOnline: true,
-    message:"add an Image into Worlda",
+    title: "Create Contact Formular",
+    project: "Worlda",
+    progress: "98%",
+    subtask: [
+    {
     date: "today",
-    time:"10:30"
+    teamImgName:[
+    "mark-p", "marvin-s", "sebastian-k"
+    ],
+    time:"13:40",
+    title: "Creating the Context",
+    progress: "66%"
     },
     {
-    name: "Benni I.",
-    imgName: "benni-i",
-    isOnline: true,
-    message:"add an Image into Worlda",
-    date: "today",
-    time:"10:30"
+    date: "yesterday",
+    teamImgName:[
+    "marvin-s", "sebastian-k"
+    ],
+    time:"12:40",
+    title: "Implementation in the Layout",
+    progress: "ready"
+    }
+    ]
     },
     {
-    name: "Mark P.",
-    imgName: "mark-p",
-    isOnline: true,
-    message:"add an Image into Worlda",
+    title: "Create Contact Formular",
+    project: "Worlda",
+    progress: "98%",
+    subtask: [
+    {
     date: "today",
-    time:"10:30"
+    teamImgName:[
+    "mark-p", "marvin-s", "sebastian-k"
+    ],
+    time:"13:40",
+    title: "Creating the Context",
+    progress: "66%"
+    },
+    {
+    date: "yesterday",
+    teamImgName:[
+    "marvin-s", "sebastian-k"
+    ],
+    time:"12:40",
+    title: "Implementation in the Layout",
+    progress: "ready"
+    }
+    ]
+    },
+    {
+    title: "Create Contact Formular",
+    project: "Worlda",
+    progress: "98%",
+    subtask: [
+    {
+    date: "today",
+    teamImgName:[
+    "mark-p", "marvin-s", "sebastian-k"
+    ],
+    time:"13:40",
+    title: "Creating the Context",
+    progress: "66%"
+    },
+    {
+    date: "yesterday",
+    teamImgName:[
+    "marvin-s", "sebastian-k"
+    ],
+    time:"12:40",
+    title: "Implementation in the Layout",
+    progress: "ready"
+    }
+    ]
     }
     ]
 
-mixin task-card(task)
-    div.nn-card.nn-card_task
-        div.nn-card__item.nn-card__item_sidebar._relative
-            div.nn-b-avatar
-                img(src="img/avatar/" + user.imgName + ".jpg")
-                if(user.isOnline === true)
-                    div.nn-marker.nn-marker_online
-                else
-                    div.nn-marker
+//mixin subtask-card(title)
+  +genericPanel('red', title, 'danger.png' )
 
-        div.nn-card__item.nn-card__item_sidebar
-            div.b-activity
-                div.b-activity__item.title.title_activity
-                    b=user.name + " "
-                    =user.message
-                div.b-activity__item.title_light.title_date
-                    b= user.date + " "
-                    =user.time + " "
-                    b PM
+mixin task-card(task)
+    div.accordionContainer
+        ul
+            li.nn-task
+                div.nn-task__title=task.title
+                div.nn-task__content
+                    div.nn-subtask
+                        each subtask in taskList.subtask
+                            div.nn-subtask__item
+                                h1=task.subtask.title
+                                span=task.subtask.progress
 
 div.nn-projects
     div.nn-projects__item
@@ -129,7 +212,9 @@ div.nn-projects
                             option Project 5
 
     div.nn-projects__item
-        div.accordionContainer
+        for task in taskList
+            +task-card(task)
+        //div.accordionContainer
             ul
                 li.nn-task
                     div.nn-task__title Slide One
