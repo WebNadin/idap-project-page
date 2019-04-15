@@ -3,6 +3,7 @@ $(document).ready(function () {
     switchTabs();
     setHeight();
     setWidth();
+    accordionInit();
     /*var $width = $(document).width();
      if ($width < 767) {
      }
@@ -31,17 +32,26 @@ function setHeight() {
     var $headerHeight = $(".nn-header").height() + 60;
     var $tabsHeight = $(".nn-b-tabs").height();
     //var $mainHeight = +($deviceHeight - $headerHeight);
-    var $mainHeight = +($(".tools").height() - $headerHeight -$tabsHeight);
+    var $mainHeight = +($(".tools").height() - $headerHeight - $tabsHeight);
     /*console.log('$deviceHeight = ');console.log($deviceHeight);
-    console.log('$headerHeight = ');console.log($headerHeight);*/
-    console.log('$mainHeight = ');console.log($mainHeight);
+     console.log('$headerHeight = ');console.log($headerHeight);*/
+    console.log('$mainHeight = ');
+    console.log($mainHeight);
     $(".main").css("height", $mainHeight);
 }
 
 function setWidth() {
     var $parentWidth = +$(".b-link_archive").parent(".main__item").width() + "px";
-    console.log('$parentWidth = ');console.log($parentWidth);
+    console.log('$parentWidth = ');
+    console.log($parentWidth);
     $(".b-link_archive").css("width", $parentWidth);
+}
+
+function accordionInit() {
+    $('.accordionContainer').uberAccordion({
+        headerClass: 'nn-task__title',
+        contentClass: 'nn-task__content'
+    });
 }
 
 

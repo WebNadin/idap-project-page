@@ -159,6 +159,10 @@
     }
   }
 }
+.nn-projects{
+  display:flex;
+  flex-direction:column;
+}
 .nn-sidebar{
   display:flex;
   flex-direction:column;
@@ -182,6 +186,20 @@
     }
   }
 }
+
+
+.uberAccordion .nn-task{
+  display:flex;
+  flex-direction:column;
+  &__title{
+    background-color:transparent;
+    width:100%;
+  }
+  &__content{
+    background-color:#d3d7da;
+  }
+}
+
 .nn-txt{
   background-color:$bg-second-dark;
   color:$text-color-second;
