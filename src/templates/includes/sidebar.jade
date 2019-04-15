@@ -3,6 +3,7 @@
     {
     name: "Mark P.",
     imgName: "mark-p",
+    isOnline: true,
     message:"add an Image into Worlda",
     date: "today",
     time:"10:30"
@@ -10,6 +11,7 @@
     {
     name: "Marvin S.",
     imgName: "marvin-s",
+    isOnline: true,
     message:"add an Image into Worlda",
     date: "today",
     time:"10:30"
@@ -24,6 +26,7 @@
     {
     name: "Mark P.",
     imgName: "mark-p",
+    isOnline: true,
     message:"add an Image into Worlda",
     date: "today",
     time:"10:30"
@@ -31,6 +34,7 @@
     {
     name: "Philip O.",
     imgName: "philip-o",
+    isOnline: true,
     message:"add an Image into Worlda",
     date: "today",
     time:"10:30"
@@ -38,6 +42,7 @@
     {
     name: "Benni I.",
     imgName: "benni-i",
+    isOnline: true,
     message:"add an Image into Worlda",
     date: "today",
     time:"10:30"
@@ -45,6 +50,7 @@
     {
     name: "Mark P.",
     imgName: "mark-p",
+    isOnline: true,
     message:"add an Image into Worlda",
     date: "today",
     time:"10:30"
@@ -52,6 +58,7 @@
     {
     name: "Marvin S.",
     imgName: "marvin-s",
+    isOnline: true,
     message:"add an Image into Worlda",
     date: "today",
     time:"10:30"
@@ -59,6 +66,7 @@
     {
     name: "Sebastian K. ",
     imgName: "sebastian-k",
+    isOnline: true,
     message:"add an Image into Worlda",
     date: "today",
     time:"10:30"
@@ -66,6 +74,7 @@
     {
     name: "Benni I.",
     imgName: "benni-i",
+    isOnline: true,
     message:"add an Image into Worlda",
     date: "today",
     time:"10:30"
@@ -73,6 +82,7 @@
     {
     name: "Mark P.",
     imgName: "mark-p",
+    isOnline: true,
     message:"add an Image into Worlda",
     date: "today",
     time:"10:30"
@@ -81,17 +91,22 @@
 
 mixin user-card(user)
     div.nn-card.nn-card_sidebar
-        div.nn-card__item
+        div.nn-card__item.nn-card__item_sidebar._relative
             div.nn-b-avatar
                 img(src="img/avatar/" + user.imgName + ".jpg")
-        div.nn-card__item
+                if(user.isOnline === true)
+                    div.nn-marker.nn-marker_online
+                else
+                    div.nn-marker
+
+        div.nn-card__item.nn-card__item_sidebar
             div.b-activity
                 div.b-activity__item.title.title_activity
                     b=user.name + " "
                     =user.message
                 div.b-activity__item.title_light.title_date
                     b= user.date + " "
-                    =user.time
+                    =user.time + " "
                     b PM
 
 sidebar

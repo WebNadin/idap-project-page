@@ -11,8 +11,19 @@
     height:35px;
     width:35px;
   }
-  .title_tabs{
-    display:none;
+  .title{
+    &_activity{
+      font-size:14px;
+    }
+    &_date{
+      font-size:12px;
+    }
+    &_nav{
+      display:none;
+    }
+    &_tabs{
+      display:none;
+    }
   }
   .tools{
     width:100px;

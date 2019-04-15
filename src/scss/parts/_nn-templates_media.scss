@@ -18,11 +18,21 @@
   .active .nn-card:before{
     height:70px !important;
   }
-  .nn-card_nav{
-    padding:10px 15px;
+  .nn-card{
+    &_nav{
+      padding:10px 15px;
+    }
+    &_sidebar{
+      padding:10px; }
+    /*&_sidebar{
+      flex-flow:row wrap;
+    }
+    &__item_sidebar{
+      width:100%;
+    }*/
   }
-  .title_nav{
-    display:none;
+  .nn-sidebar__item:last-child{
+    width:300px;
   }
 }
 @media screen and (max-width:768px) {

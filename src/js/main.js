@@ -1,7 +1,8 @@
 $(document).ready(function () {
     $('select').niceSelect();
     switchTabs();
-    //setHeight();
+    setHeight();
+    setWidth();
     /*var $width = $(document).width();
      if ($width < 767) {
      }
@@ -27,13 +28,20 @@ function switchTabs() {
 }
 function setHeight() {
     var $deviceHeight = screen.height;
-    var $headerHeight = $(".nn-header").height() + 61;
-    var $mainHeight = +($deviceHeight - $headerHeight);
-    console.log('$deviceHeight = ');console.log($deviceHeight);
-    console.log('$headerHeight = ');console.log($headerHeight);
+    var $headerHeight = $(".nn-header").height() + 60;
+    var $tabsHeight = $(".nn-b-tabs").height();
+    //var $mainHeight = +($deviceHeight - $headerHeight);
+    var $mainHeight = +($(".tools").height() - $headerHeight -$tabsHeight);
+    /*console.log('$deviceHeight = ');console.log($deviceHeight);
+    console.log('$headerHeight = ');console.log($headerHeight);*/
     console.log('$mainHeight = ');console.log($mainHeight);
     $(".main").css("height", $mainHeight);
-    console.log('$mainHeight = ');console.log($mainHeight);
+}
+
+function setWidth() {
+    var $parentWidth = +$(".b-link_archive").parent(".main__item").width() + "px";
+    console.log('$parentWidth = ');console.log($parentWidth);
+    $(".b-link_archive").css("width", $parentWidth);
 }
 
 
