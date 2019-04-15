@@ -4,7 +4,6 @@
   min-height:40px;
   min-width:40px;
   overflow:hidden;
-  /*position:relative;*/
   img{
     height:100%;
     display:block;
@@ -54,7 +53,6 @@
       height:100%;
     }
   }
-
 }
 .nn-b-img{
   border-radius:50%;
@@ -86,9 +84,9 @@
   &__item{
     box-sizing:border-box;
     &:last-child{
-    padding-left:30px;
-    width:415px;
-  }
+      padding-left:30px;
+      width:415px;
+    }
   }
 }
 .nn-button{
@@ -186,20 +184,30 @@
     }
   }
 }
-
-
-.uberAccordion .nn-task{
-  display:flex;
-  flex-direction:column;
-  &__title{
-    background-color:transparent;
-    width:100%;
-  }
-  &__content{
-    background-color:#d3d7da;
+.uberAccordion .nm-task.active .nn-task__title{
+  border-bottom:1px solid #c2c5c7;
+}
+.uberAccordion{
+  .nn-task{
+    border-top:1px solid #eaeaea;
+    cursor:pointer;
+    display:flex;
+    flex-direction:column;
+    &.active{
+      &__title{
+        background-color:transparent;
+        width:100%;
+      }
+    }
+    &__title{
+      background-color:transparent;
+      width:100%;
+    }
+    &__content{
+      background:#f8f8f8 url("../img/bg-subtask.jpg");
+    }
   }
 }
-
 .nn-txt{
   background-color:$bg-second-dark;
   color:$text-color-second;
