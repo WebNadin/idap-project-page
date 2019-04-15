@@ -3,13 +3,14 @@
 }
 .active, ._attention{
   .icon{
-    fill:$icon-color-active;
     &_tabs{
       fill:$icon-color-light;
     }
-  }
-  .title{
-    color:$text-color-second;
+    &_toggle{
+      transform:rotate(-90deg);
+      position:relative;
+      right:2px;
+    }
   }
 }
 .active{
@@ -49,23 +50,17 @@
     transform:translateY(1px);
   }
 }
-.main{
-  background-color:$bg-first;
-  display:flex;
-  justify-content:space-between;
-  height:100vh;
-  padding:30px;
-  &__item{
-    border:1px solid #dcdcdc;
-    border-radius:5px;
-    box-shadow: -1px 2px 4px 1px rgba(0,0,0,0.11);
-    overflow-x:hidden;
-    overflow-y:scroll;
-    &:first-child{
-      flex:1;
-      margin-right:20px;
-    }
-  }
+:focus::-webkit-input-placeholder{
+  color:transparent;
+}
+:focus::-moz-placeholder{
+  color:transparent;
+}
+:focus:-moz-placeholder{
+  color:transparent;
+}
+:focus:-ms-input-placeholder{
+  color:transparent;
 }
 .icon{
   fill:$icon-color-base;
@@ -74,12 +69,28 @@
   &_tabs{
     fill:$icon-color-light;
   }
+  &_toggle{
+    transform:rotate(90deg);
+  }
+  &_subtask{
+    fill:#a6a6a6;
+    &:hover{
+      fill:white;
+    }
+
+  }
+  &_nav{
+    fill:#4e5053;
+    &._attention{
+      fill:red;
+    }
+  }
 }
 .input{
   &_search{
     border:none;
     opacity:.5;
-    text-overflow: ellipsis;
+    text-overflow:ellipsis;
     &:focus{
       outline:none;
     }
@@ -89,20 +100,35 @@
     }
   }
 }
-:focus::-webkit-input-placeholder {
-    color: transparent;
+:focus::-webkit-input-placeholder{
+  color:transparent;
 }
-
-:focus::-moz-placeholder {
-    color: transparent;
+:focus::-moz-placeholder{
+  color:transparent;
 }
-
-:focus:-moz-placeholder {
-    color: transparent;
+:focus:-moz-placeholder{
+  color:transparent;
 }
-
-:focus:-ms-input-placeholder {
-    color: transparent;
+:focus:-ms-input-placeholder{
+  color:transparent;
+}
+.main{
+  background-color:$bg-first;
+  display:flex;
+  justify-content:space-between;
+  height:100vh;
+  padding:30px;
+  &__item{
+    border:1px solid #dcdcdc;
+    border-radius:5px;
+    box-shadow:-1px 2px 4px 1px rgba(0, 0, 0, 0.11);
+    overflow-x:hidden;
+    overflow-y:scroll;
+    &:first-child{
+      flex:1;
+      margin-right:20px;
+    }
+  }
 }
 .nice-select{
   background-color:transparent;
@@ -137,8 +163,22 @@
     width:18px;
   }
 }
+.progress{
+  border:1px solid #c3c3c3;
+  border-radius:5px;
+  box-sizing:border-box;
+  flex-shrink:0;
+  font-size:$font-size-large;
+  text-align:center;
+  text-transform:uppercase;
+  padding:7px;
+  width:56px;
+  &_ready{
+    font-size:12px;
+  }
+}
 .tools{
-  background: #000 url("../img/bg-nav.jpg") repeat-y;
+  background:#000 url("../img/bg-nav.jpg") repeat-y;
   box-sizing:border-box;
   display:flex;
   flex:1;
@@ -165,6 +205,18 @@
   }
   &_nav{
     font-size:$font-size-smaller;
+  }
+  &_ready{
+    opacity:.5;
+    text-decoration:line-through;
+    &:after{
+      content:"&#10004";
+      display:block;
+      position:absolute;
+    }
+  }
+  &_white{
+    color:$text-color-second;
   }
 }
 .wr{

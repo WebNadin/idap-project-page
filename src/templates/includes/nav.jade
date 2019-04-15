@@ -1,10 +1,19 @@
-mixin nav-card(icon,title)
+mixin nav-card(icon,title,mod, modIcon)
+    - mod = mod || ""
+    - modIcon = modIcon || ""
     div.nn-card.nn-card_nav
         div.nn-card__item.nn-card__item_nav
-            svg(class="icon icon-" + icon)
-                use(xlink:href="img/symbol-defs.svg#icon-" + icon)
+            if mod
+                svg(class="icon icon_nav icon-" + icon + " _" + modIcon)
+                    use(xlink:href="img/symbol-defs.svg#icon-" + icon)
+            else
+                svg(class="icon icon_nav icon-" + icon)
+                    use(xlink:href="img/symbol-defs.svg#icon-" + icon)
         div.nn-card__item
-            div.title.title_nav= title
+            if mod
+                div(class="title title_nav title_" + mod)= title
+            else
+                div.title.title_nav= title
 
 mixin points
     div.nn-b-points
@@ -26,7 +35,7 @@ section.tools._abs-left
             div.nn-nav__item
                 +points
                 div.wr_card.active
-                    +nav-card('meter','Board')
+                    +nav-card('meter','Board','white',"attention")
                 +points
                 div.wr_card._relative
                     +txt('9', '_menu')

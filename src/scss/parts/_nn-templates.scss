@@ -10,6 +10,15 @@
     width:100%;
   }
 }
+.nn-b-col-between{
+  align-items:center;
+  display:flex;
+  justify-content:space-between;
+  &__item{
+    align-items:center;
+    display:flex;
+  }
+}
 .nn-b-icon{
   align-items:center;
   background-color:$icon-color-active;
@@ -62,6 +71,37 @@
   &_tabs{
     background-color:transparent;
     margin-right:12px;
+  }
+  &_subtask{
+    align-items:center;
+    background-color:white;
+    border:1px solid #a4a4a4;
+    border-radius:50%;
+    color:#a6a6a6;
+    display:flex;
+    justify-content:center;
+    line-height:33px;
+    height:33px;
+    padding:0;
+    width:33px;
+    transform:none;
+    svg{
+      fill:#a6a6a6;
+      width:15px;
+    }
+    &:hover{
+      background-color:$icon-color-active;
+      border-color:transparent;
+      color:$text-color-second;
+      &:last-child{
+        background-color:transparent;
+        border:1px solid #a4a4a4;
+        color:#a6a6a6;
+      }
+      svg{
+        fill:$text-color-second;
+      }
+    }
   }
   .icon{
     &_header{
@@ -199,6 +239,10 @@
   }
 }
 .nn-projects{
+  display:flex;
+  flex-direction:column;
+}
+.nn-subtask{
   display:flex;
   flex-direction:column;
 }
