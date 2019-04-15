@@ -1,6 +1,7 @@
 $(document).ready(function () {
     $('select').niceSelect();
     switchTabs();
+    //setHeight();
     /*var $width = $(document).width();
      if ($width < 767) {
      }
@@ -24,6 +25,15 @@ function switchTabs() {
         $('#' + $(this).attr('title')).fadeIn(); // Выводим содержание текущей закладки
     });
 }
-
+function setHeight() {
+    var $deviceHeight = screen.height;
+    var $headerHeight = $(".nn-header").height() + 61;
+    var $mainHeight = +($deviceHeight - $headerHeight);
+    console.log('$deviceHeight = ');console.log($deviceHeight);
+    console.log('$headerHeight = ');console.log($headerHeight);
+    console.log('$mainHeight = ');console.log($mainHeight);
+    $(".main").css("height", $mainHeight);
+    console.log('$mainHeight = ');console.log($mainHeight);
+}
 
 

@@ -5,92 +5,94 @@
     imgName: "mark-p",
     message:"add an Image into Worlda",
     date: "today",
-    time:"10:30 PM"
+    time:"10:30"
     },
     {
     name: "Marvin S.",
     imgName: "marvin-s",
     message:"add an Image into Worlda",
     date: "today",
-    time:"10:30 PM"
+    time:"10:30"
     },
     {
     name: "Sebastian K. ",
     imgName: "sebastian-k",
     message:"add an Image into Worlda",
     date: "today",
-    time:"10:30 PM"
+    time:"10:30"
     },
     {
     name: "Mark P.",
     imgName: "mark-p",
     message:"add an Image into Worlda",
     date: "today",
-    time:"10:30 PM"
+    time:"10:30"
     },
     {
     name: "Philip O.",
     imgName: "philip-o",
     message:"add an Image into Worlda",
     date: "today",
-    time:"10:30 PM"
+    time:"10:30"
     },
     {
     name: "Benni I.",
     imgName: "benni-i",
     message:"add an Image into Worlda",
     date: "today",
-    time:"10:30 PM"
+    time:"10:30"
     },
     {
     name: "Mark P.",
     imgName: "mark-p",
     message:"add an Image into Worlda",
     date: "today",
-    time:"10:30 PM"
+    time:"10:30"
     },
     {
     name: "Marvin S.",
     imgName: "marvin-s",
     message:"add an Image into Worlda",
     date: "today",
-    time:"10:30 PM"
+    time:"10:30"
     },
     {
     name: "Sebastian K. ",
     imgName: "sebastian-k",
     message:"add an Image into Worlda",
     date: "today",
-    time:"10:30 PM"
+    time:"10:30"
     },
     {
     name: "Benni I.",
     imgName: "benni-i",
     message:"add an Image into Worlda",
     date: "today",
-    time:"10:30 PM"
+    time:"10:30"
     },
     {
     name: "Mark P.",
     imgName: "mark-p",
     message:"add an Image into Worlda",
     date: "today",
-    time:"10:30 PM"
+    time:"10:30"
     }
     ]
 
 mixin user-card(user)
-    div.nn-card
+    div.nn-card.nn-card_sidebar
         div.nn-card__item
-            div.nn-b-icon.nn-b-icon_tabs
-                img.card-img.auto__img(src="img/avatar/" + user.imgName + ".jpg")
+            div.nn-b-avatar
+                img(src="img/avatar/" + user.imgName + ".jpg")
         div.nn-card__item
-            //div.title=user.name + " " + user.message
             div.b-activity
-                div.b-activity__item
+                div.b-activity__item.title.title_activity
                     b=user.name + " "
                     =user.message
-                div.b-activity__item= user.date + " " + user.time
+                div.b-activity__item.title_light.title_date
+                    b= user.date + " "
+                    =user.time
+                    b PM
 
 sidebar
     div.nn-sidebar
