@@ -75,6 +75,35 @@
     fill:$icon-color-light;
   }
 }
+.input{
+  &_search{
+    border:none;
+    opacity:.5;
+    text-overflow: ellipsis;
+    &:focus{
+      outline:none;
+    }
+    &:focus{
+      content:"";
+      opacity:1;
+    }
+  }
+}
+:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+:focus::-moz-placeholder {
+    color: transparent;
+}
+
+:focus:-moz-placeholder {
+    color: transparent;
+}
+
+:focus:-ms-input-placeholder {
+    color: transparent;
+}
 .nice-select{
   background-color:transparent;
   border:1px solid $border-color-second;
@@ -132,7 +161,7 @@
   }
   &_light{
     color:$text-color-first-light;
-    opacity:.5;
+    opacity:.8;
   }
   &_nav{
     font-size:$font-size-smaller;

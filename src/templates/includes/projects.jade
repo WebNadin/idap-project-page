@@ -111,7 +111,23 @@ mixin task-card(task)
 
 div.nn-projects
     div.nn-projects__item
-        div.nn-b-search search
+        div.nn-b-search
+            div.nn-b-search__item
+                input.input.input_search(type="text", placeholder="Search Project, User, Task, etc...")
+            div.nn-b-search__item
+                div.nn-card.nn-card_search
+                    div.nn-card__item.nn-card__item_search
+                        div.nn-b-icon.nn-b-icon_search
+                            span +
+                    div.nn-card__item
+                        select
+                            option(data-display="New Projects")
+                            option Project 1
+                            option Project 2
+                            option Project 3
+                            option Project 4
+                            option Project 5
+
     div.nn-projects__item
         div.accordionContainer
             ul

@@ -28,15 +28,9 @@ function switchTabs() {
     });
 }
 function setHeight() {
-    var $deviceHeight = screen.height;
     var $headerHeight = $(".nn-header").height() + 60;
     var $tabsHeight = $(".nn-b-tabs").height();
-    //var $mainHeight = +($deviceHeight - $headerHeight);
     var $mainHeight = +($(".tools").height() - $headerHeight - $tabsHeight);
-    /*console.log('$deviceHeight = ');console.log($deviceHeight);
-     console.log('$headerHeight = ');console.log($headerHeight);*/
-    console.log('$mainHeight = ');
-    console.log($mainHeight);
     $(".main").css("height", $mainHeight);
 }
 

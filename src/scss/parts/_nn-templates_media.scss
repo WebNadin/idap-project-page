@@ -1,4 +1,24 @@
 @media screen and (max-width:1200px) {
+  .nn-b-search{
+    font-size:$font-size-small;
+    padding:15px;
+  }
+  .nn-card{
+    &_search .nice-select{
+      font-size:$font-size-small;
+      padding-left:10px;
+      padding-right:25px;
+      &:after{
+        right:10px;
+      }
+      .current:after{
+        display:none;
+      }
+    }
+    &_sidebar{
+      padding:10px;
+    }
+  }
   .nn-b-tabs{
     font-size:$font-size-base;
     &__item:last-child{
@@ -7,6 +27,9 @@
       padding-right:30px;
       width:325px;
     }
+  }
+  .nn-sidebar__item:last-child{
+    width:250px;
   }
 }
 @media screen and (max-width:1024px) {
@@ -22,11 +45,6 @@
     &_nav{
       padding:10px 15px;
     }
-    &_sidebar{
-      padding:10px; }
-  }
-  .nn-sidebar__item:last-child{
-    width:300px;
   }
 }
 @media screen and (max-width:768px) {

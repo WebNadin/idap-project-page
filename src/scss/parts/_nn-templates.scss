@@ -23,6 +23,23 @@
   &_header{
     padding:0 13px;
   }
+  &_search{
+    color:white;
+    font-size:$font-size-larger;
+    font-weight:bold;
+    margin-right:0;
+    margin-left:10px;
+    text-align:center;
+    &:hover{
+      background-color:#adadad;
+      color:#fff;
+      cursor:pointer;
+    }
+    span{
+      display:block;
+      margin:0 auto;
+    }
+  }
   &_select{
     background-color:$icon-color-online;
     &:after{
@@ -76,6 +93,12 @@
     width:5px;
   }
 }
+.nn-b-search{
+  align-items:center;
+  display:flex;
+  justify-content:space-between;
+  padding:20px 30px;
+}
 .nn-b-tabs{
   align-items:center;
   display:flex;
@@ -111,6 +134,21 @@
     justify-content:center;
     padding:20px 30px;
   }
+  &_search{
+    .current{
+      &:after{
+        content:" (descending)";
+        font-weight:normal }
+    }
+    .nice-select{
+      font-size:$font-size-base;
+      padding-left:20px;
+      text-transform:inherit;
+      &:before{
+        display:none;
+      }
+    }
+  }
   &_sidebar{
     border-bottom:1px solid #eaeaea;
     padding:25px 30px;
@@ -119,6 +157,9 @@
     &_nav{
       text-align:center;
       width:100%;
+    }
+    &_search{
+      order:2;
     }
   }
 }
@@ -188,8 +229,12 @@
   border-bottom:1px solid #c2c5c7;
 }
 .uberAccordion{
+  margin:0;
   .nn-task{
     border-top:1px solid #eaeaea;
+    /*&:first-child{
+      border:none;
+    }*/
     cursor:pointer;
     display:flex;
     flex-direction:column;
@@ -214,6 +259,8 @@
   align-items:center;
   border-radius:50%;
   display:flex;
+  font-size:$font-size-smaller;
+  font-weight:bold;
   justify-content:center;
   position:absolute;
   right:20px;

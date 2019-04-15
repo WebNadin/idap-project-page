@@ -1,6 +1,18 @@
 @media screen and (max-width:1200px) {
-  .title_light{
-    font-size:$font-size-smaller;
+  .input_search{
+    overflow:hidden;
+    width:65px;
+  }
+  .title{
+    &_light{
+      font-size:$font-size-small;
+    }
+    &_activity{
+      font-size:$font-size-small;
+      b{
+        display:block;
+      }
+    }
   }
 }
 @media screen and (max-width:992px) {
@@ -12,9 +24,6 @@
     width:35px;
   }
   .title{
-    &_activity{
-      font-size:14px;
-    }
     &_date{
       font-size:12px;
     }
