@@ -164,17 +164,21 @@
   }
 }
 .progress{
+  align-items:center;
   border:1px solid #c3c3c3;
   border-radius:5px;
   box-sizing:border-box;
+  display:flex;
   flex-shrink:0;
-  font-size:$font-size-large;
+  height:32px;
+  margin-right:15px;
   text-align:center;
   text-transform:uppercase;
-  padding:7px;
+  padding:10px 7px 7px 10px;
   width:56px;
   &_ready{
     font-size:12px;
+    padding:7px;
   }
 }
 .tools{
@@ -206,13 +210,24 @@
   &_nav{
     font-size:$font-size-smaller;
   }
+  &_subtask{
+    font-size:20px;
+  }
   &_ready{
     opacity:.5;
+    position:relative;
     text-decoration:line-through;
     &:after{
-      content:"&#10004";
+      background: $bg-first url("../img/icons/done.svg") no-repeat center center;
+      background-size: 100% 100%;
+      content:"";
       display:block;
+      height:22px;
+      left:100%;
       position:absolute;
+      top:0;
+      transform:translate(7px, 2px);
+      width:17px;
     }
   }
   &_white{

@@ -176,7 +176,17 @@ mixin task-card(task)
     div.accordionContainer
         ul
             li.nn-task
-                div.nn-task__title=task.title
+                //div.nn-task__title=task.title
+                div.nn-task__title
+                    div.nn-b-col-between
+                        div.nn-b-col-between__item=task.title
+                        div.nn-b-col-between__item
+                            div.nn-b-info=task.project
+                            div.nn-b-icon.nn-b-icon_subtask
+                                svg(class="icon icon_subtask icon-search")
+                                    use(xlink:href="img/symbol-defs.svg#icon-search")
+                            div.nn-b-icon.nn-b-icon_subtask
+                                span.icon_toggle &#8250
                 div.nn-task__content
                     div.nn-subtask
                         for subtask, i in task.subtask
@@ -184,10 +194,11 @@ mixin task-card(task)
                             div.nn-subtask__item
                                 div.nn-b-col-between
                                     div.nn-b-col-between__item
-                                        div.progress=task.subtask[i].progress
                                         if task.subtask[i].progress === "ready"
+                                            div.progress.progress_ready=task.subtask[i].progress
                                             div.title.title_subtask.title_ready=task.subtask[i].title
                                         else
+                                            div.progress=task.subtask[i].progress
                                             div.title.title_subtask=task.subtask[i].title
 
                                     div.nn-b-col-between__item
@@ -195,9 +206,6 @@ mixin task-card(task)
                                         div.nn-b-icon.nn-b-icon_subtask
                                             svg(class="icon icon_subtask icon-search")
                                                 use(xlink:href="img/symbol-defs.svg#icon-search")
-                                        div.nn-b-icon.nn-b-icon_subtask
-                                            span.icon_toggle &#8250
-
 
 div.nn-projects
     div.nn-projects__item
