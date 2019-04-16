@@ -1,14 +1,16 @@
 $(document).ready(function () {
     $('select').niceSelect();
+
+    $('.accordionContainer').uberAccordion({
+        headerClass: 'nn-task__title',
+        contentClass: 'nn-task__content',
+        startSlide: 3,
+        openMultiple: true
+    });
+
     switchTabs();
     setHeight();
     setWidth();
-    accordionInit();
-    /*var $width = $(document).width();
-     if ($width < 767) {
-     }
-     else {
-     }*/
 
 });
 
@@ -41,11 +43,11 @@ function setWidth() {
     $(".b-link_archive").css("width", $parentWidth);
 }
 
-function accordionInit() {
-    $('.accordionContainer').uberAccordion({
-        headerClass: 'nn-task__title',
-        contentClass: 'nn-task__content'
-    });
-}
+/*function accordionInit() {
+ $('.accordionContainer').uberAccordion({
+ headerClass: 'nn-task__title',
+ contentClass: 'nn-task__content'
+ });
+ }*/
 
 
