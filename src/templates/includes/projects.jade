@@ -169,14 +169,10 @@
     }
     ]
 
-//mixin subtask-card(title)
-  +genericPanel('red', title, 'danger.png' )
-
 mixin task-card(task)
     div.accordionContainer
         ul
             li.nn-task
-                //div.nn-task__title=task.title
                 div.nn-task__title
                     div.nn-b-col-between
                         div.nn-b-col-between__item=task.title
@@ -190,7 +186,6 @@ mixin task-card(task)
                 div.nn-task__content
                     div.nn-subtask
                         for subtask, i in task.subtask
-                            //div.nn-subtask__item=task.subtask[i].title
                             div.nn-subtask__item
                                 div.nn-b-col-between
                                     div.nn-b-col-between__item
@@ -202,7 +197,16 @@ mixin task-card(task)
                                             div.title.title_subtask=task.subtask[i].title
 
                                     div.nn-b-col-between__item
-                                        div.nn-b-info=task.subtask[i].project
+                                        div.nn-b-info
+                                            div.nn-b-info__item
+                                                div.nn-b-icon.nn-b-icon_info
+                                                    svg(class="icon icon_subtask icon-spinner11")
+                                                        use(xlink:href="img/symbol-defs.svg#icon-spinner11")
+                                            div.nn-b-info__item
+                                                div.title_info=task.subtask[i].date + ", "
+                                                    span.title_time=task.subtask[i].time + " "
+                                                    span PM
+
                                         div.nn-b-icon.nn-b-icon_subtask
                                             svg(class="icon icon_subtask icon-search")
                                                 use(xlink:href="img/symbol-defs.svg#icon-search")
@@ -228,17 +232,4 @@ div.nn-projects
 
     div.nn-projects__item
         for task in taskList
-            +task-card(task)
-        //div.accordionContainer
-            ul
-                li.nn-task
-                    div.nn-task__title Slide One
-                    div.nn-task__content Content for slide one is rendered from here.
-                li.nn-task
-                    div.nn-task__title Slide Two
-                    div.nn-task__content Content for slide two is rendered from here.
-                li.nn-task
-                    div.nn-task__title Slide Three
-                    div.nn-task__content Content for slide three is rendered from here.
-        //for user in userList
             +task-card(task)

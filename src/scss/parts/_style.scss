@@ -203,6 +203,9 @@
   &_date{
     text-transform:uppercase;
   }
+  &_info{
+    font-size:$font-size-small;
+  }
   &_light{
     color:$text-color-first-light;
     opacity:.8;
@@ -212,6 +215,9 @@
   }
   &_subtask{
     font-size:20px;
+  }
+  &_time{
+    font-weight:normal;
   }
   &_ready{
     opacity:.5;

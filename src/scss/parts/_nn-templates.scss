@@ -103,6 +103,17 @@
       }
     }
   }
+  &_info{
+    align-items:center;
+    background-color:transparent;
+    display:flex;
+    justify-content:center;
+    margin-right:8px;
+    width:auto;
+    svg{
+      width:12px;
+    }
+  }
   .icon{
     &_header{
       fill:$bg-first;
@@ -120,6 +131,21 @@
     height:100%;
     width:100%;
   }
+}
+.nn-b-info{
+  align-items:center;
+  border: 1px solid $border-color-third;
+  border-radius:15px;
+  display:flex;
+  font-size:$font-size-small;
+  font-weight:bold;
+  height:30px;
+  line-height:30px;
+  margin-left:8px;
+  margin-right:8px;
+  padding-left:20px;
+  padding-right:20px;
+  text-transform:uppercase;
 }
 .nn-b-points{
   display:flex;
