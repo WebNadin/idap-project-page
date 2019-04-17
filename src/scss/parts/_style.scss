@@ -181,15 +181,10 @@
     padding:7px;
   }
 }
-.tools{
-  background:#000 url("../img/bg-nav.jpg") repeat-y;
-  box-sizing:border-box;
-  display:flex;
-  flex:1;
-  flex-direction:column;
-  padding-bottom:30px;
-  padding-top:30px;
-  width:130px;
+.team{
+  &__item{
+    position:relative;
+  }
 }
 .title{
   font-size:$font-size-larger;
@@ -224,8 +219,8 @@
     position:relative;
     text-decoration:line-through;
     &:after{
-      background: $bg-first url("../img/icons/done.svg") no-repeat center center;
-      background-size: 100% 100%;
+      background:$bg-first url("../img/icons/done.svg") no-repeat center center;
+      background-size:100% 100%;
       content:"";
       display:block;
       height:22px;
@@ -239,6 +234,16 @@
   &_white{
     color:$text-color-second;
   }
+}
+.tools{
+  background:#000 url("../img/bg-nav.jpg") repeat-y;
+  box-sizing:border-box;
+  display:flex;
+  flex:1;
+  flex-direction:column;
+  padding-bottom:30px;
+  padding-top:30px;
+  width:130px;
 }
 .wr{
   &_avatar{

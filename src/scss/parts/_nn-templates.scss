@@ -25,15 +25,38 @@
   border-radius:50%;
   box-sizing:border-box;
   display:flex;
+  flex-shrink:0;
+  justify-content:center;
   height:40px;
   margin-right:7px;
-  transform:scale(-1, 1);
   width:40px;
   &_header{
     padding:0 13px;
+    transform:scale(-1, 1);
+  }
+  &_info{
+    align-items:center;
+    background-color:transparent;
+    display:flex;
+    justify-content:center;
+    margin-right:8px;
+    width:auto;
+    svg{
+      width:12px;
+    }
+  }
+  &_online{
+    background-color:transparent;
+    border:1px solid #a4a4a4;
+    border-radius:50%;
+    color:#a7a7a7;
+    font-size:12px;
+    height:30px;
+    margin-right:0;
+    width:30px;
   }
   &_search{
-    color:white;
+    color:$text-color-second;
     font-size:$font-size-larger;
     font-weight:bold;
     margin-right:0;
@@ -68,10 +91,6 @@
       width:5px;
     }
   }
-  &_tabs{
-    background-color:transparent;
-    margin-right:12px;
-  }
   &_subtask{
     align-items:center;
     background-color:white;
@@ -80,11 +99,13 @@
     color:#a6a6a6;
     display:flex;
     justify-content:center;
-    line-height:33px;
     height:33px;
+    line-height:33px;
     padding:0;
     width:33px;
-    transform:none;
+    &:last-child{
+      margin-right:0;
+    }
     svg{
       fill:#a6a6a6;
       width:15px;
@@ -103,16 +124,9 @@
       }
     }
   }
-  &_info{
-    align-items:center;
+  &_tabs{
     background-color:transparent;
-    display:flex;
-    justify-content:center;
-    margin-right:8px;
-    width:auto;
-    svg{
-      width:12px;
-    }
+    margin-right:12px;
   }
   .icon{
     &_header{
@@ -134,7 +148,7 @@
 }
 .nn-b-info{
   align-items:center;
-  border: 1px solid $border-color-third;
+  border:1px solid $border-color-third;
   border-radius:15px;
   display:flex;
   font-size:$font-size-small;
@@ -319,7 +333,7 @@
     }
     &__title{
       background-color:transparent;
-      width:100%;
+      padding:20px 30px;
     }
     &__content{
       padding:0;

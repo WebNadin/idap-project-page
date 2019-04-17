@@ -31,6 +31,12 @@
   .nn-sidebar__item:last-child{
     width:250px;
   }
+  .nn-subtask__item{
+    padding:15px;
+  }
+  .uberAccordion .nn-task__title{
+    padding:15px;
+  }
 }
 @media screen and (max-width:1024px) {
   .nn-tabs__item{

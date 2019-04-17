@@ -8,6 +8,7 @@
     {
     date: "today",
     teamImgName:["mark-p", "marvin-s", "sebastian-k"],
+    isOnline:[true, true, false],
     time:"13:40",
     title: "Creating the Context",
     progress: "66%"
@@ -15,6 +16,7 @@
     {
     date: "yesterday",
     teamImgName:["marvin-s", "sebastian-k"],
+    isOnline:[true, false],
     time:"12:40",
     title: "Implementation in the Layout",
     progress: "ready"
@@ -28,18 +30,16 @@
     subtask: [
     {
     date: "today",
-    teamImgName:[
-    "mark-p", "marvin-s", "sebastian-k"
-    ],
+    teamImgName:["mark-p", "marvin-s", "sebastian-k"],
+    isOnline:[true, true, false],
     time:"13:40",
     title: "Creating the Context",
     progress: "66%"
     },
     {
     date: "yesterday",
-    teamImgName:[
-    "marvin-s", "sebastian-k"
-    ],
+    teamImgName:["marvin-s", "sebastian-k"],
+    isOnline:[true, false],
     time:"12:40",
     title: "Implementation in the Layout",
     progress: "ready"
@@ -53,18 +53,16 @@
     subtask: [
     {
     date: "today",
-    teamImgName:[
-    "mark-p", "marvin-s", "sebastian-k"
-    ],
+    teamImgName:["mark-p", "marvin-s", "sebastian-k"],
+    isOnline:[true, true, false],
     time:"13:40",
     title: "Creating the Context",
     progress: "66%"
     },
     {
     date: "yesterday",
-    teamImgName:[
-    "marvin-s", "sebastian-k"
-    ],
+    teamImgName:["marvin-s", "sebastian-k"],
+    isOnline:[true, false],
     time:"12:40",
     title: "Implementation in the Layout",
     progress: "ready"
@@ -78,68 +76,16 @@
     subtask: [
     {
     date: "today",
-    teamImgName:[
-    "mark-p", "marvin-s", "sebastian-k"
-    ],
+    teamImgName:["mark-p", "marvin-s", "sebastian-k"],
+    isOnline:[true, true, false],
     time:"13:40",
     title: "Creating the Context",
     progress: "66%"
     },
     {
     date: "yesterday",
-    teamImgName:[
-    "marvin-s", "sebastian-k"
-    ],
-    time:"12:40",
-    title: "Implementation in the Layout",
-    progress: "ready"
-    }
-    ]
-    },
-    {
-    title: "Create Contact Formular",
-    project: "Worlda",
-    progress: "98%",
-    subtask: [
-    {
-    date: "today",
-    teamImgName:[
-    "mark-p", "marvin-s", "sebastian-k"
-    ],
-    time:"13:40",
-    title: "Creating the Context",
-    progress: "66%"
-    },
-    {
-    date: "yesterday",
-    teamImgName:[
-    "marvin-s", "sebastian-k"
-    ],
-    time:"12:40",
-    title: "Implementation in the Layout",
-    progress: "ready"
-    }
-    ]
-    },
-    {
-    title: "Create Contact Formular",
-    project: "Worlda",
-    progress: "98%",
-    subtask: [
-    {
-    date: "today",
-    teamImgName:[
-    "mark-p", "marvin-s", "sebastian-k"
-    ],
-    time:"13:40",
-    title: "Creating the Context",
-    progress: "66%"
-    },
-    {
-    date: "yesterday",
-    teamImgName:[
-    "marvin-s", "sebastian-k"
-    ],
+    teamImgName:["marvin-s", "sebastian-k"],
+    isOnline:[true, false],
     time:"12:40",
     title: "Implementation in the Layout",
     progress: "ready"
@@ -154,6 +100,7 @@
     {
     date: "today",
     teamImgName:["mark-p", "marvin-s", "sebastian-k"],
+    isOnline:[true, true, false],
     time:"13:40",
     title: "Creating the Context",
     progress: "66%"
@@ -161,6 +108,53 @@
     {
     date: "yesterday",
     teamImgName:["marvin-s", "sebastian-k"],
+    isOnline:[true, false],
+    time:"12:40",
+    title: "Implementation in the Layout",
+    progress: "ready"
+    }
+    ]
+    },
+    {
+    title: "Create Contact Formular",
+    project: "Worlda",
+    progress: "98%",
+    subtask: [
+    {
+    date: "today",
+    teamImgName:["mark-p", "marvin-s", "sebastian-k"],
+    isOnline:[true, true, false],
+    time:"13:40",
+    title: "Creating the Context",
+    progress: "66%"
+    },
+    {
+    date: "yesterday",
+    teamImgName:["marvin-s", "sebastian-k"],
+    isOnline:[true, false],
+    time:"12:40",
+    title: "Implementation in the Layout",
+    progress: "ready"
+    }
+    ]
+    },
+    {
+    title: "Create Contact Formular",
+    project: "Worlda",
+    progress: "98%",
+    subtask: [
+    {
+    date: "today",
+    teamImgName:["mark-p", "marvin-s", "sebastian-k"],
+    isOnline:[true, true, false],
+    time:"13:40",
+    title: "Creating the Context",
+    progress: "66%"
+    },
+    {
+    date: "yesterday",
+    teamImgName:["marvin-s", "sebastian-k"],
+    isOnline:[true, false],
     time:"12:40",
     title: "Implementation in the Layout",
     progress: "ready"
@@ -168,6 +162,16 @@
     ]
     }
     ]
+
+
+
+mixin team()
+        div.nn-b-avatar.nn-b-avatar_subtask
+            img(src="img/avatar/" + name + ".jpg")
+            if(isOnline == true)
+                div.nn-marker.nn-marker_online
+            else
+                div.nn-marker
 
 mixin task-card(task)
     div.accordionContainer
@@ -197,6 +201,20 @@ mixin task-card(task)
                                             div.title.title_subtask=task.subtask[i].title
 
                                     div.nn-b-col-between__item
+                                        div.team
+                                            div.team__item
+                                                for name, j in task.subtask[i].teamImgName
+                                                    div.nn-b-avatar.nn-b-avatar_subtask
+                                                        img(src="img/avatar/" + task.subtask[i].teamImgName[j] + ".jpg")
+                                                        //for status, e in task.subtask[i].isOnline
+                                                            span test
+                                                            //if(task.subtask[i].isOnline[e] == true)
+                                                                div.nn-marker.nn-marker_online
+                                                            //else
+                                                                div.nn-marker
+                                                //+team("mark-p", true)
+                                        div.nn-b-icon.nn-b-icon_online
+                                            span +3
                                         div.nn-b-info
                                             div.nn-b-info__item
                                                 div.nn-b-icon.nn-b-icon_info
@@ -206,7 +224,6 @@ mixin task-card(task)
                                                 div.title_info=task.subtask[i].date + ", "
                                                     span.title_time=task.subtask[i].time + " "
                                                     span PM
-
                                         div.nn-b-icon.nn-b-icon_subtask
                                             svg(class="icon icon_subtask icon-search")
                                                 use(xlink:href="img/symbol-defs.svg#icon-search")
