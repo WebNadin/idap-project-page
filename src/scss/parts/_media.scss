@@ -1,7 +1,6 @@
 @media screen and (max-width:1200px) {
   .input_search{
     overflow:hidden;
-    width:65px;
   }
   .title{
     &_light{
@@ -23,8 +22,19 @@
     height:35px;
     width:35px;
   }
+  .main__item{
+    &:first-child{
+      margin-right:0;
+    }
+    &:last-child{
+      display:none;
+    }
+  }
   .title{
     &_date{
+      font-size:12px;
+    }
+    &_info{
       font-size:12px;
     }
     &_nav{
@@ -33,9 +43,20 @@
     &_tabs{
       display:none;
     }
+    &_subtask{
+      font-size:16px;
+    }
   }
   .tools{
     width:100px;
+  }
+  .wr_subtask{
+    &__item{
+      &:first-child{
+        margin-bottom:10px;
+      }
+      width:100%;
+    }
   }
 }
 @media screen and (max-width:768px) {

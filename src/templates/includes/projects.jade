@@ -54,7 +54,7 @@
     {
     date: "today",
     teamImgName:["mark-p", "marvin-s", "sebastian-k"],
-    isOnline:[true, true, false],
+    isOnline:[1, 1, 0],
     time:"13:40",
     title: "Creating the Context",
     progress: "66%"
@@ -62,7 +62,7 @@
     {
     date: "yesterday",
     teamImgName:["marvin-s", "sebastian-k"],
-    isOnline:[true, false],
+    isOnline:[1, 0],
     time:"12:40",
     title: "Implementation in the Layout",
     progress: "ready"
@@ -166,12 +166,12 @@
 
 
 mixin team()
-        div.nn-b-avatar.nn-b-avatar_subtask
-            img(src="img/avatar/" + name + ".jpg")
-            if(isOnline == true)
-                div.nn-marker.nn-marker_online
-            else
-                div.nn-marker
+    div.nn-b-avatar.nn-b-avatar_subtask
+        img(src="img/avatar/" + name + ".jpg")
+        if(isOnline == true)
+            div.nn-marker.nn-marker_online
+        else
+            div.nn-marker
 
 mixin task-card(task)
     div.accordionContainer
@@ -182,51 +182,57 @@ mixin task-card(task)
                         div.nn-b-col-between__item=task.title
                         div.nn-b-col-between__item
                             div.nn-b-info=task.project
-                            div.nn-b-icon.nn-b-icon_subtask
-                                svg(class="icon icon_subtask icon-search")
-                                    use(xlink:href="img/symbol-defs.svg#icon-search")
-                            div.nn-b-icon.nn-b-icon_subtask
-                                span.icon_toggle &#8250
+                            div.wr_task-cons
+                                div.nn-b-icon.nn-b-icon_subtask
+                                    svg(class="icon icon_subtask icon-search")
+                                        use(xlink:href="img/symbol-defs.svg#icon-search")
+                                div.nn-b-icon.nn-b-icon_subtask
+                                    span.icon_toggle &#8250
                 div.nn-task__content
                     div.nn-subtask
                         for subtask, i in task.subtask
                             div.nn-subtask__item
                                 div.nn-b-col-between
                                     div.nn-b-col-between__item
-                                        if task.subtask[i].progress === "ready"
-                                            div.progress.progress_ready=task.subtask[i].progress
-                                            div.title.title_subtask.title_ready=task.subtask[i].title
-                                        else
-                                            div.progress=task.subtask[i].progress
-                                            div.title.title_subtask=task.subtask[i].title
+                                        div.wr_subtask
+                                            if task.subtask[i].progress === "ready"
+                                                div.wr_subtask__item
+                                                    div.progress.progress_ready=task.subtask[i].progress
+                                                div.wr_subtask__item
+                                                    div.title.title_subtask.title_ready=task.subtask[i].title
+                                            else
+                                                div.wr_subtask__item
+                                                    div.progress=task.subtask[i].progress
+                                                div.wr_subtask__item
+                                                    div.title.title_subtask=task.subtask[i].title
 
                                     div.nn-b-col-between__item
-                                        div.team
-                                            div.team__item
-                                                for name, j in task.subtask[i].teamImgName
-                                                    div.nn-b-avatar.nn-b-avatar_subtask
-                                                        img(src="img/avatar/" + task.subtask[i].teamImgName[j] + ".jpg")
-                                                        //for status, e in task.subtask[i].isOnline
-                                                            span test
-                                                            //if(task.subtask[i].isOnline[e] == true)
-                                                                div.nn-marker.nn-marker_online
-                                                            //else
-                                                                div.nn-marker
-                                                //+team("mark-p", true)
-                                        div.nn-b-icon.nn-b-icon_online
-                                            span +3
-                                        div.nn-b-info
-                                            div.nn-b-info__item
-                                                div.nn-b-icon.nn-b-icon_info
-                                                    svg(class="icon icon_subtask icon-spinner11")
-                                                        use(xlink:href="img/symbol-defs.svg#icon-spinner11")
-                                            div.nn-b-info__item
-                                                div.title_info=task.subtask[i].date + ", "
-                                                    span.title_time=task.subtask[i].time + " "
-                                                    span PM
-                                        div.nn-b-icon.nn-b-icon_subtask
-                                            svg(class="icon icon_subtask icon-search")
-                                                use(xlink:href="img/symbol-defs.svg#icon-search")
+                                        div.wr_subtask
+                                            div.wr_subtask__item.wr_subtask__item_right
+                                                div.team
+                                                    for name, j in task.subtask[i].teamImgName
+                                                        div.team__item
+                                                            div.nn-b-avatar.nn-b-avatar_team
+                                                                img(src="img/avatar/" + task.subtask[i].teamImgName[j] + ".jpg")
+                                                                if(task.subtask[i].isOnline[j] == 1)
+                                                                    div.nn-marker.nn-marker_online
+                                                                else
+                                                                    div.nn-marker
+                                                div.nn-b-icon.nn-b-icon_online
+                                                    span +3
+                                            div.wr_subtask__item.wr_subtask__item_right
+                                                div.nn-b-info
+                                                    div.nn-b-info__item
+                                                        div.nn-b-icon.nn-b-icon_info
+                                                            svg(class="icon icon_subtask icon-spinner11")
+                                                                use(xlink:href="img/symbol-defs.svg#icon-spinner11")
+                                                    div.nn-b-info__item
+                                                        div.title_info=task.subtask[i].date + ", "
+                                                        span.title_time=task.subtask[i].time + " "
+                                                        span PM
+                                                div.nn-b-icon.nn-b-icon_subtask
+                                                    svg(class="icon icon_subtask icon-search")
+                                                        use(xlink:href="img/symbol-defs.svg#icon-search")
 
 div.nn-projects
     div.nn-projects__item

@@ -1,9 +1,13 @@
 .nn-b-avatar{
   border-radius:50%;
   margin-right:10px;
-  min-height:40px;
-  min-width:40px;
+  height:40px;
+  width:40px;
   overflow:hidden;
+  &_team{
+    height:30px;
+    width:30px;
+  }
   img{
     height:100%;
     display:block;
@@ -160,6 +164,9 @@
   padding-left:20px;
   padding-right:20px;
   text-transform:uppercase;
+  &__item{
+    display:flex;
+  }
 }
 .nn-b-points{
   display:flex;
