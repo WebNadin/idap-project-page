@@ -69,6 +69,13 @@
     }
   }
 }
+@media screen and (max-width:784px){
+    .nn-b-col-between__item{
+      ._mob-marg{
+        margin-top:10px;
+      }
+    }
+}
 @media screen and (max-width:768px) {
   .nice-select{
     height:38px;
