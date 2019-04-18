@@ -269,9 +269,15 @@
     flex-flow:row wrap;
     &__item{
       display:flex;
+      /*&:first-child{
+        width:100%;
+      }*/
       &_right{
         justify-content:flex-end;
       }
     }
+  }
+  &_right{
+    justify-content:flex-end;
   }
 }

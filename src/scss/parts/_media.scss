@@ -1,3 +1,8 @@
+@media screen and (max-width:1440px) {
+  .wr_subtask__item_right{
+    margin-bottom:10px;
+  }
+}
 @media screen and (max-width:1200px) {
   .input_search{
     overflow:hidden;
@@ -50,11 +55,18 @@
   .tools{
     width:100px;
   }
-  .wr_subtask{
-    &__item{
-      &:first-child{
-        margin-bottom:10px;
+  .wr{
+    &_subtask{
+      &__item{
+        &:first-child{
+          margin-bottom:10px;
+        }
+        width:100%;
       }
+    }
+    &_task-icons{
+      display:flex;
+      justify-content:flex-end;
       width:100%;
     }
   }
@@ -74,6 +86,9 @@
     &:after{
       right:15px;
     }
+  }
+  .title_ready:after{
+    display:none;
   }
 }
 @media screen and (max-width:540px) {

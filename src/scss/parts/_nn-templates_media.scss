@@ -1,3 +1,11 @@
+@media screen and (max-width:1440px) {
+  .nn-card_sidebar{
+    padding:20px 20px;
+  }
+  .nn-sidebar__item:last-child{
+    width:290px;
+  }
+}
 @media screen and (max-width:1200px) {
   .nn-b-search{
     font-size:$font-size-small;
@@ -63,6 +71,12 @@
   /*.nn-b-icon_subtask{
     flex-flow:row wrap;
   }*/
+  .nn-b-info{
+    &_task{
+      margin-right:0;
+      margin-bottom:10px;
+    }
+  }
   .nn-b-col-between__item{
     flex-flow:row wrap;
   }

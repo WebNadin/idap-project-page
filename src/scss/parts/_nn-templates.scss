@@ -20,6 +20,7 @@
   justify-content:space-between;
   &__item{
     align-items:center;
+    justify-content:flex-end;
     display:flex;
   }
 }
@@ -103,10 +104,10 @@
     color:#a6a6a6;
     display:flex;
     justify-content:center;
-    height:33px;
-    line-height:33px;
+    height:30px;
+    line-height:30px;
     padding:0;
-    width:33px;
+    width:30px;
     &:last-child{
       margin-right:0;
     }
@@ -155,6 +156,7 @@
   border:1px solid $border-color-third;
   border-radius:15px;
   display:flex;
+  flex-shrink:0;
   font-size:$font-size-small;
   font-weight:bold;
   height:30px;

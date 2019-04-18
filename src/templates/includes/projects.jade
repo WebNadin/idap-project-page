@@ -181,8 +181,8 @@ mixin task-card(task)
                     div.nn-b-col-between
                         div.nn-b-col-between__item=task.title
                         div.nn-b-col-between__item
-                            div.nn-b-info=task.project
-                            div.wr_task-cons
+                            div.nn-b-info.nn-b-info_task=task.project
+                            div.wr_task-icons
                                 div.nn-b-icon.nn-b-icon_subtask
                                     svg(class="icon icon_subtask icon-search")
                                         use(xlink:href="img/symbol-defs.svg#icon-search")
@@ -207,7 +207,7 @@ mixin task-card(task)
                                                     div.title.title_subtask=task.subtask[i].title
 
                                     div.nn-b-col-between__item
-                                        div.wr_subtask
+                                        div.wr_subtask.wr_right
                                             div.wr_subtask__item.wr_subtask__item_right
                                                 div.team
                                                     for name, j in task.subtask[i].teamImgName
