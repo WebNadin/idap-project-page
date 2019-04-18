@@ -34,6 +34,7 @@ function setHeight() {
     var $tabsHeight = $(".nn-b-tabs").height();
     var $mainHeight = +($(".tools").height() - $headerHeight - $tabsHeight);
     $(".main").css("height", $mainHeight);
+    /*$(".main__item").css("height", $mainHeight);*/
 }
 
 function setWidth() {

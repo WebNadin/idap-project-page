@@ -38,6 +38,7 @@
   position:absolute;
   &_archive{
     padding:20px 30px;
+    position: sticky;
     width:100%;
     z-index:100;
   }
@@ -157,7 +158,6 @@
     height:18px;
     left:20px;
     margin-top:-9px;
-    /*opacity:.2;*/
     position:absolute;
     top:50%;
     width:18px;
@@ -275,9 +275,6 @@
     flex-flow:row wrap;
     &__item{
       display:flex;
-      /*&:first-child{
-        width:100%;
-      }*/
       &_right{
         justify-content:flex-end;
       }

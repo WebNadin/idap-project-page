@@ -23,6 +23,9 @@
   header, main{
     margin-left:100px;
   }
+  .b-link_archive{
+    padding:15px;
+  }
   .icon{
     height:35px;
     width:35px;
@@ -64,11 +67,6 @@
         width:100%;
       }
     }
-    /*&_task-icons{
-      display:flex;
-      justify-content:flex-end;
-      width:100%;
-    }*/
   }
 }
 @media screen and (max-width:768px) {
