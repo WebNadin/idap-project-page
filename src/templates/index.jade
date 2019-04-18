@@ -2,6 +2,8 @@ doctype html
 html(lang="ru")
     include ./includes/head.jade
     body
+        object(type="image/svg+xml", data="img/symbol-defs.svg")
+            img(src="img/symbol-defs.svg", alt="image format png")
         include ./includes/nav.jade
         div.wr_page
             include ./includes/header.jade
