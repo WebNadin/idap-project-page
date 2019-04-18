@@ -179,7 +179,9 @@ mixin task-card(task)
             li.nn-task
                 div.nn-task__title
                     div.nn-b-col-between
-                        div.nn-b-col-between__item=task.title
+                        div.nn-b-col-between__item
+                            div.progress.progress_task=task.progress
+                            span=task.title
                         div.nn-b-col-between__item
                             div.nn-b-info.nn-b-info_task=task.project
                             div.wr_task-icons

@@ -22,6 +22,9 @@
     align-items:center;
     justify-content:flex-end;
     display:flex;
+    &:first-child{
+      justify-content:flex-start;
+    }
   }
 }
 .nn-b-icon{
