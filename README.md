@@ -1,4 +1,4 @@
-# Valtech simple page
+# IDAP simple page
 
 ### Installation
 

@@ -39,6 +39,7 @@ gulp.task('server', function (callback) {
 
         server: {
             baseDir: "dev/"
+            /*baseDir: "dist/"*/
         }
     });
     gulp.watch(src.sass, ['sass-reload']);

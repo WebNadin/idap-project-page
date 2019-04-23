@@ -152,12 +152,13 @@
     right:20px;
   }
   &:before{
-    background:url('../img/icons/bubbles3.svg') no-repeat center center;
+    background:url('/img/icons/bubbles3.svg') no-repeat center center;
     background-size:100% 100%;
     content:'';
     height:18px;
     left:20px;
     margin-top:-9px;
+    opacity:.2;
     position:absolute;
     top:50%;
     width:18px;
@@ -243,7 +244,7 @@
   }
 }
 .tools{
-  background:#000 url("../img/bg-nav.jpg") repeat-y;
+  background:#000 url("/img/bg-nav.JPG") repeat-y;
   box-sizing:border-box;
   display:flex;
   flex:1;
