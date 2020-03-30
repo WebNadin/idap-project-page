@@ -38,7 +38,7 @@ gulp.task('server', function (callback) {
         /*proxy: "rplus.zeema.org.ua/"*/
 
         server: {
-            baseDir: "dev/"
+            baseDir: "dist/"
         }
     });
     gulp.watch(src.sass, ['sass-reload']);
