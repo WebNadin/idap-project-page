@@ -1,4 +1,4 @@
-# Valtech simple page
+# HTML-coding of time-tracker. User-cabinet page.
 
 ### Installation
 
